@@ -1,0 +1,3 @@
+in <head>:
+    @vite('resources/css/app.css') //voor css conn.
+    @vite('resources/js/app.js') //voor js conn.

@@ -1,0 +1,23 @@
+[ROOT]
+|> public (root on server end)
+    |> index.php (index on sever end)
+    |> hot (blocks css on live, REMOVE IT)
+    
+|> resources (css, js en pages)
+    |> css
+        |> app.css (globol css file)
+        |> [PAGE].css (css die alleen op [PAGE] word gebruikt)
+
+    |> js
+        |> app.js (globol js file)
+        |> [PAGE].js (js die alleen op [PAGE] word gebruikt)
+
+    |> views (de PHP paginas)
+        |> [PAGE].blade.php (je moet .blade toevoegen)
+        
+|> routes
+    |> web.php (de pagina die alle paginas gaat re route)
+
+|> .env (all prived info, DONT UPLOAD EVER)
+|> .env.example (dit is een voorbeeld, deze word geupload dus type hier geen info)
+|> .gitignore (files die niet naar git worden geupload. bv. env)
