@@ -4,19 +4,19 @@
     |> hot (blocks css on live, REMOVE IT)
     
 |> resources (css, js en pages)
-    |> css
+    |> css [devCMD-1]
         |> app.css (globol css file)
         |> [PAGE].css (css die alleen op [PAGE] word gebruikt)
 
-    |> js
+    |> js [devCMD-1]
         |> app.js (globol js file)
         |> [PAGE].js (js die alleen op [PAGE] word gebruikt)
 
-    |> views (de PHP paginas)
+    |> views [davCMD-3] (de PHP paginas)
         |> [PAGE].blade.php (je moet .blade toevoegen)
         
 |> routes
-    |> web.php (de pagina die alle paginas gaat re route)
+    |> web.php [devCMD-2] (de pagina die alle paginas gaat re route)
 
 |> .env (all prived info, DONT UPLOAD EVER)
 |> .env.example (dit is een voorbeeld, deze word geupload dus type hier geen info)
