@@ -1,0 +1,163 @@
+[devCMD-1]
+    in <head>:
+        @vite('resources/css/app.css') //voor css conn.
+        @vite('resources/js/app.js') //voor js conn.
+    of als je een andere nodig hebt moet je alleen 'app' vervangen met de file naam
+
+[devCMD-2]
+    kijk in [devCMD-3] voor de <a>
+
+    Basis Route:
+        [PAGE] is de link in de url, zonder .blade.php
+        
+            Route::get('/[PAGE]', function () {
+                return view('[PAGE]');
+            });
+
+        dit return view('[PAGE]') betekent dat je de pagina returned maar dat ken eigelijk alles zijn.
+        je kan bijvoorbeelt return "text" doen en dan krijg je de text te zien
+
+    Named Route:
+        je kan een nickname toevoegen aan een url:
+            Route::get('/[PAGE]', function () {})->name("[NICKNAME]")  ;
+
+    Parem Route:
+        je kan ook 1 (of meerdere) vars met de url sturen:
+
+            Route::get('/[PAGE]/[VAR1]/[VAR2]', function ($[VAR1], $[VAR2]) {});
+    
+        maar dan MOET de url ook wel ALLE vars hebben in deze vorm:
+            domijn/paginaNaam/waarde1/waarde2
+        bijvoorbeeld:
+            twitter/login/John/Doe
+
+    Groeped Route:
+        groeped routes kan je gebruiken om meerdere url te groepen, net alsof ze in een folder zitten.
+        bijvoorbeelt:
+        [PAGE1]
+        [PAGE1]/[PAGE2]
+        [PAGE1]/[PAGE3]
+        met groeped routes kan je deze bij elkaar doen zodat je ze niet allemaal los van alkaar hoeft te schijfen.
+        ik heb alleen nog niet echt een goede reden gezien om dit te gebuiken, 
+        maar in geval dat is hier een youtube video die het uitlegt:
+        [CTRL + CLICK] https://youtu.be/9tZZai4aZ4k?si=HwFjvaixF5SjQbMG&t=987
+
+    Post Route:
+        post routes worden gebruikt bij forms
+        de beste manier is om het met een named href + route te doen 
+
+            Route::post('/[ACTION]', function () {})->name("[NICKNAME]");
+
+        als nu nu ook nog iets met de info in de form wil doen moet dat met $request
+        (dit is in de Route::post bij het deel met function)
+
+            function (request $request) {
+                $[VALUE1] = %request->input("[INPUTNAME1]")
+                $[VALUE2] = %request->input("[INPUTNAME2]")
+            }
+        
+        de normale $[VALUE1] = $_POST["INPUTNAME1"] werkt niet meer
+        maar we willen ook kijken of die waardes die we krijgen wel mogen
+        dat kan in laravel op een nieuwe manier:
+
+            function (request $request) {
+                $request->validate([
+                    '[INPUTNAME1]' => '[RULE1]',
+                    '[INPUTNAME2]' => '[RULE1]|[RULE2]'
+                ])
+            }
+
+        met dit kan de form alleen worden ge submit als de rule ge volged zijn
+        ik weet alleen niet hoe we hier error codes aan kunnen doen en of dat al word gedaan 
+        dus daar moet ik nog naar kijken
+        
+        je kan een lijst met alle rules vinden bij de link samen met wat voorbelden hoe je ze gebruikt
+        [CTRL + CLICK] https://laravel.com/docs/12.x/validation#available-validation-rules
+        hier zijn wat veel gebruikte:
+            required = spreekt voor zich
+            min:x = moet minimaal x letters hebben (string only)
+            max:x = moet maximaal x letters hebben (string only)
+            ascii = alle cells moeten op de ascii table staan (string only)
+            Email = het moet een Email zijn (string only)
+            Accepted = alleen als de input Accepted was (Boolean only)
+        maar er zijn er nog veel meer
+
+        nadat je de inputs hebt validate moet je ze nog wel ophalen
+        je kan nu ook de values direct in een string doen: "je Email is $email"
+
+
+[devCMD-3]
+    Basis href:
+        [PAGE] is de link in de url, zonder .blade.php
+        door de .blade kunnen wij makkelijk url's maken:
+
+            {{ url('/[PAGE]') }}
+
+        als je dit in een <a> wilt gebruiken kan je gewoon dit doen:
+
+            <a href="{{ url('/[PAGE]') }}" >
+
+        (ja, er zijn {{}} in de .blade)
+
+    Named href:
+        deze zijn nicknames die we kunnen gaven aan de links
+        het werkt met:
+            {{ route('/[NICKNAME]') }}
+        kijk in [devCMD-2] om te zien hoe je een nickname toevoegt
+        voor de rest werk exact hetzelfde
+
+    form href:
+        we hebben vaker met forms gewerkt dus ik hoop dat we de basis al kennen
+        maar er zijn een paar aanpasingen die we moeten doen
+
+        ten eerst de url
+        alleen /[ACTION] werk natuurlijk niet, dus we moeten weer gebruik maken van .blade
+        het beste is om een named href + route te gebruiken: {{ route('/[NICKNAME]') }}
+
+        en @csrf
+        dit zorgt ervoor dan er geen directen hack kan worden gedaan
+        stopt natuurlijk niet alle hacks en het werkt alleen in forms
+        maar het is niet moelijk om effe neer te zetten dus waarom niet
+
+            <form action="{{ route('/[NICKNAME]') }}" method="post">
+                @csrf
+                <input name="[INPUTNAME1]">
+                <input name="[INPUTNAME2]">
+                <button type="submit">submit</button>
+            </form>
+
+        in de youtube video maken ze gebruik van <button type="submit"></button>
+        dit werk en is prima als je de value ervan niet hoeft te lezen, wat we ook niet doen
+        in dit soort gevallen is het selfs beter omdat we het makkelijker kunnen gebruiken in css
+
+[devCMD-4]
+    je kan hier "normale" HTML-PHP schrijfen en dan later de inhoud geven
+    dit doe je met @yield('[NAME]')
+    bijvoorbeelt:
+
+        <header>
+            @yield('header')
+        </header>
+
+    je kan dan in de page een layout kiezen met @extends('layout.[FILENAME]'); ([FILENAME] weer zonder .blade.php)
+    daarna kan je de inhoud bepaalen met:
+
+        @section('[NAME]')
+            [CONTENT]
+        @endsection
+
+    je kan ook dingen include om het op meerdere pleken te gebruiken:
+
+        @include('include.[FILENAME]') (or /, ik weet het niet) ([FILENAME] weer zonder .blade.php)
+
+    dit kan handig zijn voor dingen zoals popup voor cookies
+    je kan zo'n include in bijde de normale paginas en in de layout gebruiken
+
+[devCMD-5]
+    als je een foto wilt gebruiken in een php file gaan we weer gebruik maken van .blade
+        
+        {{ asset('images/[FILENAME]') }} (deze keer moet [FILENAME] wel de .png)
+
+    dit kan je dan gewoon in de src van een <img> doen
+
+     

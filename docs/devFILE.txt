@@ -1,7 +1,11 @@
 [ROOT]
+|> docs (een folder met alle documenten die we gebruiken om de site te maken)
 |> public (root on server end)
+    |> build (word gemaakt zodat alle nodige files kunnen gebruikt worden op de live)
+    |> images [devCMD-5] (plek waar alle fotos inkomen)
     |> index.php (index on sever end)
     |> hot (blocks css on live, REMOVE IT)
+    |> favicon.ico (de image die op te tab komt)
     
 |> resources (css, js en pages)
     |> css [devCMD-1]
@@ -12,7 +16,9 @@
         |> app.js (globol js file)
         |> [PAGE].js (js die alleen op [PAGE] word gebruikt)
 
-    |> views [davCMD-3] (de PHP paginas)
+    |> views [devCMD-3] (de PHP paginas)
+        |> include [devCMD-4] (dingen die we kunnen include bv. popups)
+        |> layouts [devCMD-4] (de layouts die we kunnen gebruiken)
         |> [PAGE].blade.php (je moet .blade toevoegen)
         
 |> routes
