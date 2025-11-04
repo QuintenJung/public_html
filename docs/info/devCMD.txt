@@ -160,4 +160,53 @@
 
     dit kan je dan gewoon in de src van een <img> doen
 
-     
+[devCMD-6]
+    models laat ons data naar de database sturen
+    eerst moet je zegen in de model welke cols je via de form in de database zetten
+    dit doe je met:
+
+        protected $fillable = ['[COL1]', '[COL2]']
+
+    hier moeten alleen de col die je zelf moet invullen
+
+
+
+
+[devCMD-7]
+    controller
+
+
+
+[devCMD-8]
+    migrations laat ons makkelijk de DB te controlen
+    dat kan namelijk met de class die in de file van de table zit
+    deze word gemaakt in de setup line in de devINFO file
+    deze class kan 2 dingen: up() en down()
+    up() maakt de DB met de info in de methods, down() haalt hem weer weg
+    in up() staan 2 standaart values: id en timestemp
+
+        $table->id()
+        $table->timestamps()
+    
+    timestamps maakt 2 col: created_at en updated_at
+    als je zelf col nieuwe wilt toevoegen kan dat makkelijk
+
+        $table->[DATATYPE]('[COL]')
+
+    bijvoorbeelt:
+
+        $table->string('username')
+
+    vervolgen kan je met:
+
+        php artisan migrate
+
+    alle tablen aanmaken die nog niet bestonden
+    je kan het dan undoen met:
+    
+        php artisan migrate:rollback
+
+    dit gaat maar 1 versie terug
+    je kan ook 1 file gebruiken door --path=database/migrations/[FILENAME] aan het eind van de commando toe te voegen
+    let wel op dat dit alleen de database aanpast en niet de files
+    ja kan ook migrate:refresh gebruiken om de database te refreshen    

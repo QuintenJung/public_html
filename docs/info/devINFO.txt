@@ -1,0 +1,26 @@
+--------------------------------------------------------------------------------------------------------------
+INFO docs
+
+ik heb deze gemaak als samenvating van laravel,
+dit is geen samenvating van html, php, js of css
+als je daar wel vragen over hebt kan je het vraagen aan mij of op zoeken
+(als je het aan mij vraagt zoek in het warschijnlijk ook op)
+
+er kunnen spelfouten in de docs zitten, ik ben niet op mijn spelling aan het letten
+ook kan het zijn dat er dingen nog onduidlijk zijn, als ik het weet wil ik je best helpen maar laravel is voor mij ook nieuw
+
+bij devFILE kan je zien wat in welke folder of file moet en bij devCMD kan je kijken hoe dat moet
+hier komt algemene info en info die in niet in de andere docs vond passen
+
+--------------------------------------------------------------------------------------------------------------
+
+je kan een build maken met:
+    npx vite build
+dit zorged ervoor dat de test server ook op public werkt (na upload)
+
+--------------------------------------------------------------------------------------------------------------
+
+je kan de setup voor een nieuwe DB maken met:
+    php artisan make:model [NAME] -mcr
+
+--------------------------------------------------------------------------------------------------------------

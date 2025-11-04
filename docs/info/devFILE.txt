@@ -1,5 +1,15 @@
 [ROOT]
+|> app
+    |> Models [devCMD-6] (hier komen de models die met de database interacten)
+    |> http
+        |> Controllers [devCMD-7] (hier komen controlers die php runnen)
+        
+|> database
+    |> migrations [devCMD-8] (hier komen migrations die de database maken)
+
 |> docs (een folder met alle documenten die we gebruiken om de site te maken)
+    |> info (deze docs)
+
 |> public (root on server end)
     |> build (word gemaakt zodat alle nodige files kunnen gebruikt worden op de live)
     |> images [devCMD-5] (plek waar alle fotos inkomen)

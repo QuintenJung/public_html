@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <h1 class=" bg-danger">
+    <h1>
         HET WERKT!
     </h1>
     <p>
