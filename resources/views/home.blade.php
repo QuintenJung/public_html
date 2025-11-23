@@ -13,5 +13,6 @@
     <p>
         WOW
     </p>
+    <a href="{{ url('recources/views/secondpage') }}" >tweede pagina</a>
 </body>
 </html>
