@@ -5,5 +5,5 @@
 @endsection
 
 @section('2ahref')
-    <a href="{{ url('/home') }}" >home</a>
+    <a href="{{ url('/') }}" >home</a>
 @endsection

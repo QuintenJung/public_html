@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <h1>
-        HET WERKT!
-    </h1>
-    <p>
-        WOW
-    </p>
-    <a href="{{ url('recources/views/secondpage') }}" >tweede pagina</a>
-</body>
-</html>
+@extends('layouts.stan');
+
+@section('1ahref')
+    <p>dit is de eerste href</p>
+@endsection
+
+@section('2ahref')
+    <a href="{{ url('/secondpage') }}" >home</a>
+@endsection
