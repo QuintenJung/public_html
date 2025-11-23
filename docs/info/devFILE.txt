@@ -29,7 +29,7 @@
     |> views [devCMD-3] (de PHP paginas)
         |> include [devCMD-4] (dingen die we kunnen include bv. popups)
         |> layouts [devCMD-4] (de layouts die we kunnen gebruiken)
-        |> [PAGE].blade.php (je moet .blade toevoegen)
+        |> [PAGE].blade.php (deze gaan we sorteeren in folders)
         
 |> routes
     |> web.php [devCMD-2] (de pagina die alle paginas gaat re route)

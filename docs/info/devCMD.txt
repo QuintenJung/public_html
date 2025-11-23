@@ -85,6 +85,17 @@
         nadat je de inputs hebt validate moet je ze nog wel ophalen
         je kan nu ook de values direct in een string doen: "je Email is $email"
 
+    controller Route:
+        als we ook werkelijk iets willen doen met de Post info moeten we controller gebruiken [devCMD-7]
+        als eerst moet je de controller toevoegen met:
+            
+            use App\http\Controllers\[NAME]Controller
+
+        daarna kan je makkelijk alle routes toevogen met:
+
+            Route::resource('[ACTION]', [NAME]Controller::class)
+
+
 
 [devCMD-3]
     Basis href:
@@ -173,12 +184,14 @@
 
 
 [devCMD-7]
-    controller
+    controllers bestuuren de models
+    
+
 
 
 
 [devCMD-8]
-    migrations laat ons makkelijk de DB te controlen
+    migrations laat ons makkelijk de DB controlen
     dat kan namelijk met de class die in de file van de table zit
     deze word gemaakt in de setup line in de devINFO file
     deze class kan 2 dingen: up() en down()
@@ -209,4 +222,4 @@
     dit gaat maar 1 versie terug
     je kan ook 1 file gebruiken door --path=database/migrations/[FILENAME] aan het eind van de commando toe te voegen
     let wel op dat dit alleen de database aanpast en niet de files
-    ja kan ook migrate:refresh gebruiken om de database te refreshen    
+    je kan ook migrate:refresh gebruiken om de database te refreshen    

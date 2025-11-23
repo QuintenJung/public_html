@@ -1,0 +1,34 @@
+CLASS Fles {
+
+    volume;
+    inhoud;
+
+    CONSTRUKTER (volume) {
+        this.volume = volume;
+        this.inhoud = 0;
+    };
+
+    function fill(amount) {
+        this.inhoud += amount;
+        if (this.inhoud >= this.volume) {
+	    this.inhoud = this.volume
+        }
+    }
+
+    function drink(amount) {
+	this.inhoud -= amount
+	if (this.inhoud <= 0) {
+	    this.inhoud = 0
+	}
+    }
+}
+
+fles1 = new Fles(100)
+fles2 = new Fles(20)
+
+fles1.fill(50) // 50
+fles2.fill(50) // 20
+// punt A
+fles1.drink(30) // 20
+fles2.drink(30) // 0
+// punt B
