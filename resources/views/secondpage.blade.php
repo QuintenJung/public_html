@@ -1,4 +1,5 @@
-@extends('layouts.stan');
+@extends('layouts.stan')
+
 
 @section('1ahref')
     <p>dit is de eerste href</p>

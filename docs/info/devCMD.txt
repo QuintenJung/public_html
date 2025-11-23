@@ -150,7 +150,7 @@
             @yield('header')
         </header>
 
-    je kan dan in de page een layout kiezen met @extends('layouts.[FILENAME]'); ([FILENAME] weer zonder .blade.php)
+    je kan dan in de page een layout kiezen met @extends('layouts.[FILENAME]') ; ([FILENAME] weer zonder .blade.php)
     daarna kan je de inhoud bepaalen met:
 
         @section('[NAME]')

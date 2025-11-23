@@ -1,9 +1,9 @@
-@extends('layouts.stan');
+@extends('layouts.stan')
 
 @section('1ahref')
     <p>dit is de eerste href</p>
 @endsection
 
 @section('2ahref')
-    <a href="{{ url('/secondpage') }}" >home</a>
+    <a href="{{ url('/secondpage') }}" >secondpage</a>
 @endsection
