@@ -11,18 +11,46 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
-.mainContent{
-    min-height: calc(100dvh - 60px);
-}
-#logo{
-    float: left;
-    height: 60px;
+
+footer {
+    height: 20dvh;
+    box-shadow: 0 -10px 5px #0000001a;
+
+    div div {
+        height: 100%;
+        color: #f8f9fa;
+        background-repeat: no-repeat;
+    }
+    
+    div:nth-child(1) div {
+        background-image: url('../../public/images/home.png');
+        background-position: 150%;
+        background-size: 70%;
+    }
+
+    div:nth-child(2) div {
+        background-image: url('../../public/images/info.png');
+        background-position: 115%;
+        background-size: 50%;
+    }
 }
 
-#navHome{
-    float: left;
-    padding-top: 20;
+header {
+    height: 7dvh;
+
+    nav {
+        padding: 0 !important;
+
+        img {
+            height: 7dvh;
+        }
+
+        li {
+            margin-right: 10px;
+        }
+    }
 }
-.nav-item{
-    padding-right: 30px;
+
+main {
+    min-height: calc(100dvh - 7dvh - 20dvh);
 }
