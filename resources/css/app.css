@@ -11,6 +11,18 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+.mainContent{
+    min-height: calc(100dvh - 60px);
+}
 #logo{
     float: left;
+    height: 60px;
+}
+
+#navHome{
+    float: left;
+    padding-top: 20;
+}
+.nav-item{
+    padding-right: 30px;
 }

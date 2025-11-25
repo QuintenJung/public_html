@@ -1,3 +1,6 @@
 @include('include.header')
-</body>
-</html>
+<main class="mainContent">
+    @yield('1ahref')
+    @yield('2ahref')
+</main>
+@include('include.footer')

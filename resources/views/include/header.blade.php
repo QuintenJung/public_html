@@ -7,17 +7,27 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-<header class="col">
-  <img id="logo" class="col-2" src=" {{ asset('images/logoONC.png') }}" alt="Logo">
-  <nav id="navHome" class="col-10 bg-light">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link border border-dark rounded-5 active" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link border border-dark rounded-5" href="/secondpage">Secondpage</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+ <header class="shadow">
+        <nav class="navbar navbar-expand-sm bg-light nav-pills">
+
+            <div class="container-fluid justify-content-start me-5">
+              <img src="{{ asset('images/logoONC.png') }}" id="logo">
+                <ul class="nav nav-pills ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info">info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register">*register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acountGui">*accountinfo</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
 
