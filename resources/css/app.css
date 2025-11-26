@@ -3,6 +3,56 @@
 @import "tw-animate-css";
 @import "./all.css";
 
+:root {
+    --bs-primary: #f8981d;
+    --bs-primary-rgb: 248, 152, 29;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: var(--bs-primary);
+    color: #fff;
+    /* of var(--bs-btn-color) als je die set */
+}
+
+/* Hover / focus voor actieve en niet-actieve links (kleine donkerdere tint) */
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus {
+    background-color: rgba(var(--bs-primary-rgb), .15);
+    /* subtiele hover voor niet-actieve */
+    color: var(--bs-primary);
+}
+
+.nav-pills .nav-link.active:hover,
+.nav-pills .nav-link.active:focus {
+    background-color: rgba(var(--bs-primary-rgb), .95);
+    /* iets donkerder voor hover op active */
+    color: #fff;
+}
+
+/* Optioneel: randkleur matchen (als je pills met borders gebruikt) */
+.nav-pills .nav-link {
+    border-color: transparent;
+}
+
+.nav-pills .nav-link.active {
+    border-color: var(--bs-primary);
+}
+  .nav-pills .nav-link {
+      color: var(--bs-primary); /* jouw oranje kleur */
+  }
+
+  /* Hover blijft netjes */
+  .nav-pills .nav-link:hover,
+  .nav-pills .nav-link:focus {
+      color: var(--bs-primary);
+      background-color: rgba(var(--bs-primary-rgb), .15);
+  }
+
+
+
+
+
 @custom-variant dark (&:is(.dark *));
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -54,6 +104,15 @@
 }
 
 :root {
+
+
+    /* $primary: #d93eba;
+$body-bg: #fff;
+$secondary: #8300d9; */
+
+
+
+    /* --bs-nav-pills-link-active-bg: #f8981d; */
     --radius: 0.625rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.13 0.028 261.692);
@@ -123,10 +182,11 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }

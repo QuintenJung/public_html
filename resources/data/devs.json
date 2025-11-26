@@ -6,14 +6,29 @@
         "status": "github",
         "avatar": "dev",
         "userInfo": true
-
     },
     {
-        "name": "Timo",
-        "title": "john@example.com",
-        "handle": "QuintenJung",
-        "status": "admin",
+        "name": "Timo Sleeuwenhoek",
+        "title": "dev",
+        "handle": "DeathlyTimo",
+        "status": "github",
         "avatar": "dev",
-        "userInfo": false
+        "userInfo": true
+    },
+    {
+        "name": "Tiemo Verbove",
+        "title": "dev",
+        "handle": "Tiemotijger83",
+        "status": "github",
+        "avatar": "dev",
+        "userInfo": true
+    }, 
+    {
+        "name": "Tiemo Verbove",
+        "title": "dev",
+        "handle": "Tiemotijger83",
+        "status": "github",
+        "avatar": "dev",
+        "userInfo": true
     }
 ]

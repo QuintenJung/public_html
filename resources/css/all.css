@@ -1,7 +1,10 @@
 footer {
-    height: 20dvh;
+    height: 16em;
     box-shadow: 0 -10px 5px #0000001a;
 
+    div{
+        height: 100%;
+    }
     div div {
         height: 100%;
         color: #f8f9fa;
@@ -38,13 +41,14 @@ header {
 }
 
 main {
-    min-height: calc(100dvh - 7dvh - 20dvh);
+    min-height: calc(100dvh - 7dvh - 16em);
 }
 
 .profileCardShell {
     padding: 10dvh;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .profileCard {
         margin: 10px;
