@@ -41,9 +41,21 @@ main {
     min-height: calc(100dvh - 7dvh - 20dvh);
 }
 
-.profileCardShell{
+.profileCardShell {
     padding: 10dvh;
-    .profileCard{
+    display: flex;
+    justify-content: space-evenly;
+
+    .profileCard {
+        margin: 10px;
         width: 387.719px;
+
+        .pc-details {
+            top: 2em;
+
+            p {
+                top: 5px;
+            }
+        }
     }
 }

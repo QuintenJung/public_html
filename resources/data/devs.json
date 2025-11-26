@@ -1,14 +1,19 @@
-{
-    "Quinten": {
-        "lastName": "Jungschlager",
+[
+    {
+        "name": "Quinten Jungschlager",
+        "title": "dev en projectleider",
+        "handle": "QuintenJung",
+        "status": "github",
+        "avatar": "dev",
+        "userInfo": true
+
+    },
+    {
+        "name": "Quinten",
         "title": "john@example.com",
         "handle": "QuintenJung",
         "status": "admin",
-        "avatar": "dev"
-    },
-    "Timo": {
-        "email": "emma@example.com",
-        "tel": "0687654321",
-        "role": "user"
+        "avatar": "dev",
+        "userInfo": false
     }
-}
+]
