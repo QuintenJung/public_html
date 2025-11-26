@@ -20,7 +20,7 @@ const ProfileCardComponent = ({
   iconUrl = '<Placeholder for icon URL>',
   grainUrl = '<Placeholder for grain URL>',
   innerGradient,
-  behindGlowEnabled = false,
+  behindGlowEnabled = true,
   behindGlowColor,
   behindGlowSize,
   className = '',

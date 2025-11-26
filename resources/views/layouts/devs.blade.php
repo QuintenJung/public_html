@@ -13,6 +13,7 @@
             data-status="{{ $dev['status'] }}"
             data-show-user-info="{{ $dev['userInfo'] }}"
             {{-- data-contact-text="Contact Me"  --}} 
+            data-icon-url="{{ asset('images/iconpattern.png') }}"
             data-avatar-url="{{ asset('images/'. $dev['avatar'] .'.png') }}">
         </div>
         @endforeach
