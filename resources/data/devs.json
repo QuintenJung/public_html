@@ -1,0 +1,14 @@
+{
+    "Quinten": {
+        "lastName": "Jungschlager",
+        "title": "john@example.com",
+        "handle": "QuintenJung",
+        "status": "admin",
+        "avatar": "dev"
+    },
+    "Timo": {
+        "email": "emma@example.com",
+        "tel": "0687654321",
+        "role": "user"
+    }
+}

@@ -9,3 +9,4 @@
 @section('content')
     <p>dit is de home pagina</p>
 @endsection
+

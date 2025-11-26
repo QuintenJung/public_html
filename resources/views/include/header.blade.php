@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
     @vite('resources/css/app.css')
 </head>
 <?php
@@ -28,6 +27,9 @@ function active($str)
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php active('info'); ?>" href="/info">info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php active('devs'); ?>" href="/devs/Quinten">devs</a>
                 </li>
             </ul>
         </nav>

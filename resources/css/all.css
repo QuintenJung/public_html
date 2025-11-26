@@ -1,0 +1,49 @@
+footer {
+    height: 20dvh;
+    box-shadow: 0 -10px 5px #0000001a;
+
+    div div {
+        height: 100%;
+        color: #f8f9fa;
+        background-repeat: no-repeat;
+        background-position: 115%;
+        background-size: 50%;
+    }
+
+    div:nth-child(3) div {
+        background-position: 140%;
+        background-size: 60%;
+    }
+
+    div:nth-child(4) div {
+        background-position: 120%;
+        background-size: 45%;
+    }
+}
+
+header {
+    height: 7dvh;
+
+    nav {
+        padding: 0 !important;
+
+        img {
+            height: 7dvh;
+        }
+
+        li {
+            margin-right: 10px;
+        }
+    }
+}
+
+main {
+    min-height: calc(100dvh - 7dvh - 20dvh);
+}
+
+.profileCardShell{
+    padding: 10dvh;
+    .profileCard{
+        width: 387.719px;
+    }
+}
