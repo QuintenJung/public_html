@@ -28,9 +28,6 @@ function active($str)
                 <li class="nav-item">
                     <a class="nav-link <?php active('info'); ?>" href="/info">info</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('devs'); ?>" href="/devs">devs</a>
-                </li>
             </ul>
         </nav>
     </header>
