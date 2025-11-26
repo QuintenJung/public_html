@@ -1,12 +1,11 @@
 <?php
     global $title;
-    $title = "home";
+    $title = "info";
 ?>
 
 @extends('layouts.def')
 
 
 @section('content')
-    <p>dit is de home pagina</p>
+    <p>dit is de info pagina</p>
 @endsection
-

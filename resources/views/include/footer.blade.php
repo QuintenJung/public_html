@@ -1,0 +1,46 @@
+<footer class="bg-light flex">
+    <div class="col-3 p-3">
+        <div class="bg-primary border rounded-3 p-2 ps-4"
+            style="background-image: url('{{ asset('images/home.png') }}');">
+            <p class="text-light">
+            <h4>Adres</h4>
+            Oranje Nassau College Parkdreef<br>
+            mavo havo vwo technasium<br>
+            Parkdreef 282<br>
+            2724 EZ Zoetermeer<br>
+            079-341 10 41<br>
+            parkdreef@onc.unicoz.nl<br>
+            </p>
+        </div>
+    </div>
+    <div class="col-3 p-3">
+        <div class="bg-primary border rounded-3 p-2 ps-4"
+            style="background-image: url('{{ asset('images/info.png') }}');">
+            <p class="text-light">
+            <h4>Snel naar *info tabs*</h4>
+            </p>
+        </div>
+    </div>
+    <div class="col-3 p-3">
+        <div class="bg-primary border rounded-3 p-2 ps-4"
+            style="background-image: url('{{ asset('images/dev.png') }}');">
+            <p class="text-light">
+            <h4>devs *links naar dev paginas*</h4>
+            Quinten Jungschlager<br>
+            Tiemo Verbove<br>
+            Jasper Bruijn<br>
+            </p>
+        </div>
+    </div>
+    <div class="col-3 p-3">
+        <div class="bg-primary border rounded-3 p-2 ps-4"
+            style="background-image: url('{{ asset('images/phone.png') }}');">
+            <p class="text-light">
+            <h4>Volg ons op *link naar media*</h4>
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

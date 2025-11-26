@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Quinten Jungschlager",
+        "title": "dev en projectleider",
+        "handle": "QuintenJung",
+        "status": "github",
+        "avatar": "dev",
+        "userInfo": true
+
+    },
+    {
+        "name": "Quinten",
+        "title": "john@example.com",
+        "handle": "QuintenJung",
+        "status": "admin",
+        "avatar": "dev",
+        "userInfo": false
+    }
+]
