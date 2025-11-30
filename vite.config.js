@@ -8,8 +8,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/ProfileCardUse.jsx',
-                'resources/js/CardNavUse.jsx'
+                'resources/js/ProfileCardUse.jsx'
             ],
             refresh: true,
         }),
