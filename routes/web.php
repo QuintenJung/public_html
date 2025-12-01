@@ -16,3 +16,11 @@ Route::get('/devs', function () {
     return view('dev', ['devs' => $devs]);
 
 });
+
+Route::get('/loggedin', function () {
+    return 'you have logged in';
+});
+
+Route::get('/login', function () {
+    return view('login');
+});

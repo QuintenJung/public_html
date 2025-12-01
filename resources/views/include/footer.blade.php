@@ -26,9 +26,10 @@
             style="background-image: url('{{ asset('images/dev.png') }}');">
             <p class="text-light">
             <h4>devs *links naar dev paginas*</h4>
-            Quinten Jungschlager<br>
             Tiemo Verbove<br>
             Jasper Bruijn<br>
+            Quinten Jungschlager<br>
+            Timo sleeuwenhoek<br>
             </p>
         </div>
     </div>

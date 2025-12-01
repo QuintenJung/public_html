@@ -44,6 +44,16 @@ main {
     min-height: calc(100dvh - 7dvh - 16em);
 }
 
+.inputText {
+    border: 2px solid black;
+    width: 15vw;
+}
+
+#submitButton {
+    background-color: greenyellow;
+    border: 1px solid black;
+}
+
 .profileCardShell {
     padding: 10dvh;
     display: flex;
