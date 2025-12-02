@@ -14,11 +14,10 @@ Route::get('/info', function () {
 Route::get('/devs', function () {
     $devs = json_decode(file_get_contents(resource_path('data/devs.json')), true);
     return view('dev', ['devs' => $devs]);
-
 });
 
 Route::get('/loggedin', function () {
-    return 'you have logged in';
+    return "DIPSHIT";
 });
 
 Route::get('/login', function () {

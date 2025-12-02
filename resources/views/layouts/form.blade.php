@@ -1,7 +1,7 @@
 @include('include.header')
 
 <main>
-    <form action="@yield('action')" method="post">
+    <form action="@yield('action')" method="get">
         @yield('content')
     </form>
 </main>
