@@ -17,6 +17,12 @@
         dit return view('[PAGE]') betekent dat je de pagina returned maar dat ken eigelijk alles zijn.
         je kan bijvoorbeelt return "text" doen en dan krijg je de text te zien
 
+        als je vars mee wil geven kan de gewoon een param aanmaken en het daar in doen
+
+            return view('[PAGE]', [VAR])
+
+        je kan de var dan gebruiken met een blade script {{ }}
+
     Named Route:
         je kan een nickname toevoegen aan een url:
             Route::get('/[PAGE]', function () {})->name("[NICKNAME]")  ;
@@ -44,6 +50,7 @@
 
     Post Route:
         post routes worden gebruikt bij forms
+        !! Post routes hebben geen toegang tot de database !!
         de beste manier is om het met een named href + route te doen 
 
             Route::post('/[ACTION]', function () {})->name("[NICKNAME]");
@@ -93,11 +100,25 @@
 
         daarna kan je makkelijk alle routes toevogen met:
 
-            Route::resource('[ACTION]', [NAME]Controller::class)
-
-
+            Route::resource('[PAGE]', [NAME]Controller::class)
 
 [devCMD-3]
+    handig .blade function:
+        ten eerst: 
+            alle blade code is uitgevoert voor html dus 
+            ik weet niet hoe dit met php werkt
+
+        {{ $[VAR] }}
+        {{ $[VAR]->[CHILD] }}
+
+        @foreach($[ARRAY] as $[VAR])
+            <p>{{ $[VAR] }}</p>
+        @endforeach
+
+        @if ([CON])
+            <html>
+        @endif
+
     Basis href:
         [PAGE] is de link in de url, zonder .blade.php
         door de .blade kunnen wij makkelijk url's maken:
@@ -117,20 +138,21 @@
         kijk in [devCMD-2] om te zien hoe je een nickname toevoegt
         voor de rest werk exact hetzelfde
 
-    form href:
+    form:
         we hebben vaker met forms gewerkt dus ik hoop dat we de basis al kennen
         maar er zijn een paar aanpasingen die we moeten doen
 
         ten eerst de url
         alleen /[ACTION] werk natuurlijk niet, dus we moeten weer gebruik maken van .blade
-        het beste is om een named href + route te gebruiken: {{ route('/[NICKNAME]') }}
+        het beste is om een named href + route te gebruiken: {{ route('/[ROUTE]') }}
 
         en @csrf
-        dit zorgt ervoor dan er geen directen hack kan worden gedaan
-        stopt natuurlijk niet alle hacks en het werkt alleen in forms
-        maar het is niet moelijk om effe neer te zetten dus waarom niet
+        dit zorgt ervoor dat er geen rare bestanden aan onze forms kunnen zitten
+        als je de form op een niet get of post manier gebruikt moet je hem dan wel aanpassen
+        met blade kunnen wij zelf methods maken door @method('[METHOD]') te gebruiken
+        ik ken alleen DELETE en PUT (PUT is voor updaten van data)
 
-            <form action="{{ route('/[NICKNAME]') }}" method="post">
+            <form action="{{ route('/[ROUTE]') }}" method="post">
                 @csrf
                 <input name="[INPUTNAME1]">
                 <input name="[INPUTNAME2]">
@@ -140,6 +162,10 @@
         in de youtube video maken ze gebruik van <button type="submit"></button>
         dit werk en is prima als je de value ervan niet hoeft te lezen, wat we ook niet doen
         in dit soort gevallen is het selfs beter omdat we het makkelijker kunnen gebruiken in css
+
+        als we in een form de value old('[VALUENAME]') gebruiken dan komt de waarde terug als er een error was
+        je kan ook nog een 2de param toevoegen voor als er geen old value is
+
 
 [devCMD-4]
     je kan hier "normale" HTML-PHP schrijfen en dan later de inhoud geven
@@ -180,15 +206,87 @@
 
     hier moeten alleen de col die je zelf moet invullen
 
-
-
-
 [devCMD-7]
-    controllers bestuuren de models
+    controllers bestuuren de models met "normale" php
+    waneer de controler word aangemaakt 
+    zijn er een paar functions die standaart woorden aangemaakt
+    als je deze wil gebruiken moet je een controler route maken
+    deze functions kan je zien als nep paginas
+    daardoor ga je ook naar de index function als je standaart
+    maar dit zijn voorbeelden wij kunnen andere gebruiken
+    je hebt bijvoorbeeld ook create en store
+    die klinken alsof ze hetzelfde doen maar 1 is om de view met de form
+    te laten zien en de ander is het verwerken van de output
+    de reden hiervoor is dat we nu een setup kunnen opzetten (zoals de old())
+
+    je kan de function berijken met /[CONTROLLER]/[FUNCTION]
+    vergeet niet dat in blade je . gebruik in plaats van /
+
+    in deze functions gaat php komen en het meeste daarvan in de database controlen
+    gelukkig is het echt heel makkelijk
+
+        [TABLE]::[COMM]
+
+    dit returned de data die de [COMM] opvragt
+    je moet missien wel compact('[VAR]') gebruiken maar ik weet niet exact wat dat doet
+    (ik denk dat compact() alleen in de controler nodig is)
+    een paar [COMM] voorbeelden zijn:
+
+        all()
+        find()
+        findOrFail()
+        create()
+        update()
+        delete()
+
+    wat deze exact doen weet ik niet (de video is erg onduidlijk hier)
+    als je meer wilt weten kan je zoeken naar "laravel model methods" of iets in die richting
+    er zijn er heel veel dus als je er 1 nodig hebt moedig ik je aan te zoeken
+    
+        !! HERD LARAVEL KAN ANDERS ZIJN DAN NORMAAL LARAVEL !!   
+    
+    zodra je klaar bent met de php moet je een view returnen of redirecten
+    voor views kijk in de route hooftstuk
+    een redirect kan met:
+
+    redirect()->route('[url]')
+
+    redirect()->route('[url]')->with('[VAR]', '[DATA]')
+
+    nu het prosessen van data
+    het validaten van de data kan niet makkelijker
+
+        $validated = $request->validate([
+            '[INPUTNAME1]' => '[RULE1]',
+            '[INPUTNAME2]' => '[RULE1]|[RULE2]'
+        ])
+
+    als je goet oplet zie je dat deze hetzelfde is als in de post route
+    kijk daar als je meer info wil
+    als je dit dan in een param van een create() doet woord hij aangemaakt
+    je moet hier wel alle $fillable input aangeven, zelfs als ze niks doen
+
+    als er een error is in de validate kan je iets simples in html schijfen om de errors te laten zien
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            {{ $error }}
+        @endforeach
+    @endif
+
+    je kan hier ook nog gewoon html bij doen
+
+    vergeet niet dat als je data nodig hebt in de functions
+    dat je die wel moet ophalen in de param
+    form inputs haal je op met: request $request
+    om andere data te gebruiken kan je:
+
+     {{ route('[PAGE]'), [PARAM] }}
     
 
-
-
+    een row updaten kan door het met findOrFail() optezoeken en 
+    dan update($validated) uit te voeren op de row, niet de table
+    zelfde voor del
 
 [devCMD-8]
     migrations laat ons makkelijk de DB controlen
