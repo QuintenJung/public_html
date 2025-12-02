@@ -31,6 +31,9 @@ function active($str)
                 <li class="nav-item">
                     <a class="nav-link <?php active('devs'); ?>" href="/devs">*devs</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php active('login'); ?>" href="/login">login</a>
+                </li>
             </ul>
         </nav>
     </header>
