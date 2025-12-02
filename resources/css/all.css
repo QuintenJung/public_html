@@ -50,6 +50,8 @@ main {
     border: 2px solid black;
     width: 50vw;
     margin-top: 15vh;
+    padding: 2em;
+    border-radius: 2em;
 }
 
 .backgroundImg {
