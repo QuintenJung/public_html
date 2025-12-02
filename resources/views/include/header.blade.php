@@ -32,7 +32,7 @@ function active($str)
                     <a class="nav-link <?php active('devs'); ?>" href="/devs">*devs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php active('login'); ?>" href="/login">login</a>
+                    <a class="nav-link <?php active('login'); ?>" href="{{ route('user.create') }}">login</a>
                 </li>
             </ul>
         </nav>

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\users;
+use App\Models\User;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -12,7 +13,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        return view("info");
     }
 
     /**
@@ -20,7 +21,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view("users.login");
     }
 
     /**
@@ -28,13 +29,20 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'ascii',
+            'email' => 'ascii',
+            'password' => 'ascii'
+        ]);
+        // echo 'hello';
+        // return view("info");
+      return redirect()->route("user.index");
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(users $users)
+    public function show(user $user)
     {
         //
     }
@@ -42,7 +50,7 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(users $users)
+    public function edit(user $user)
     {
         //
     }
@@ -50,7 +58,7 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, users $users)
+    public function update(Request $request, user $user)
     {
         //
     }
@@ -58,7 +66,7 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(users $users)
+    public function destroy(user $user)
     {
         //
     }
