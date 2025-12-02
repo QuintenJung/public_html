@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\accounts;
+use App\Models\users;
 use Illuminate\Http\Request;
 
-class AccountsController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class AccountsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(accounts $accounts)
+    public function show(users $users)
     {
         //
     }
@@ -42,7 +42,7 @@ class AccountsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(accounts $accounts)
+    public function edit(users $users)
     {
         //
     }
@@ -50,7 +50,7 @@ class AccountsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, accounts $accounts)
+    public function update(Request $request, users $users)
     {
         //
     }
@@ -58,7 +58,7 @@ class AccountsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(accounts $accounts)
+    public function destroy(users $users)
     {
         //
     }
