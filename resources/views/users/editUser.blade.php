@@ -4,13 +4,14 @@ $title = 'editUser';
 ?>
 @extends('layouts.form')
 @section("content")
-<form action="{{ route('user.update') }}" method="POST">
+<form action="/user/{{$userInfo[0]['id']}}" method="POST">
     @csrf
     @method('PUT')
     <h2>Youre info</h2>
-    <p>{{$userInfo["name"]}}</p>
-    <p>{{$userInfo["email"]}}</p>
-    <input type="text" id="name" name="name" class="inputText"placeholder="{{$userInfo["name"]}}"><br>
+    <h4>Username: {{$userInfo[0]["name"]}}</h4>
+    <h4>Email: {{$userInfo[0]["email"]}}</h4>
+    <h3>Change username</h3>
+    <input type="text" id="name" name="name" class="inputText"placeholder="{{$userInfo[0]["name"]}}"><br>
     <button type="submit" id="submitButton">Change</button>
 </form>
 @endsection

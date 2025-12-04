@@ -35,7 +35,7 @@ function active($str)
                     <a class="nav-link <?php active('devs'); ?>" href="/devs">*devs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php active('allUser'); ?>" href="{{ route('user.index') }}">*all users</a>
+                    <a class="nav-link <?php active('allUser'); ?>" href="/user">*all users</a>
                 </li>
             </ul>
         </nav>

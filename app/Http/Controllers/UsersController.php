@@ -50,22 +50,20 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(user $user)
     {
-        $id = Auth::id();
-        $userInfo = user::find($id);
+        $userInfo = user::find($user);
         return view("users.userInfo",["userInfo" => $userInfo]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(user $user)
     {
-        // $id = Auth::id();
-        // $userInfo = user::find($id);
-        return "test";
-        // return view("users.editUser",["userInfo" => $userInfo]);
+        $userInfo = user::find($user);
+        // return "test";
+        return view("users.editUser",["userInfo" => $userInfo]);
     }
 
     /**
@@ -73,7 +71,16 @@ class UsersController extends Controller
      */
     public function update(Request $request, user $user)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'ascii|required'
+        ]);
+        $userInfo = user::find($user)[0];
+        $user = $userInfo->update([
+            'name' => $validated['name'],
+        ]);
+        // Auth::login($user);
+        $request->session()->regenerate();
+        return redirect()->route("user.index");
     }
 
     /**
