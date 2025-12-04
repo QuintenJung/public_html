@@ -23,4 +23,5 @@ Route::get('/loggedin', function () {
     return "DIPSHIT";
 });
 
-Route::post('user', UsersController::class);
+// Route::re('user', UsersController::class);
+Route::resource('/user', UsersController::class);

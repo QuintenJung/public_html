@@ -6,7 +6,7 @@
 @extends("layouts.form")
 
 @section("content")
-<form action="{{ route('user.store') }}" methode="POST">
+<form action="{{ route('user.store') }}" method="POST">
     @csrf
     <h2>Input username:</h2>
     <input type="text" id="name" name="name" class="inputText"placeholder="Enter your username here..."><br>

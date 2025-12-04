@@ -13,7 +13,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view("info");
+
     }
 
     /**
@@ -21,7 +21,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view("users.login");
+        // hij kan hem vinden
+        return view('users.login');
     }
 
     /**
@@ -30,13 +31,13 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'ascii',
-            'email' => 'ascii',
-            'password' => 'ascii'
+            'name' => 'ascii|required',
+            'email' => 'required',
+            'password' => 'ascii|required'
         ]);
-        // echo 'hello';
-        // return view("info");
-      return redirect()->route("user.index");
+
+
+        return redirect()->route("user.index");
     }
 
     /**
