@@ -13,7 +13,7 @@
     <h2>email:</h2>
     <input type="text" id="email" name="email" class="inputText" placeholder="Enter your email here..."><br>
     <h2>password:</h2>
-    <input type="text" id="password" name="password" class="inputText" placeholder="Enter your password here..."><br>
+    <input type="password" id="password" name="password" class="inputText" placeholder="Enter your password here..."><br>
     <button type="submit" id="submitButton">Done</button>
 </form>
 

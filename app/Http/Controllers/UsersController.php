@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
@@ -35,24 +37,35 @@ class UsersController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'ascii|required'
         ]);
-        user::create($validated);
+        $user = User::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => Hash::make($validated['password'])
+        ]);
+        Auth::login($user);
+        $request->session()->regenerate();
         return redirect()->route("user.index");
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(user $user)
+    public function show()
     {
-        //
+        $id = Auth::id();
+        $userInfo = user::find($id);
+        return view("users.userInfo",["userInfo" => $userInfo]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(user $user)
+    public function edit()
     {
-        //
+        // $id = Auth::id();
+        // $userInfo = user::find($id);
+        return "test";
+        // return view("users.editUser",["userInfo" => $userInfo]);
     }
 
     /**
