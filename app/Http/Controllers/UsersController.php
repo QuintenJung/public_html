@@ -13,7 +13,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-
+        $data = user::all();
+        return view('users.allUsers', ['data' => $data]);
     }
 
     /**
@@ -21,7 +22,6 @@ class UsersController extends Controller
      */
     public function create()
     {
-        // hij kan hem vinden
         return view('users.login');
     }
 
@@ -32,11 +32,10 @@ class UsersController extends Controller
     {
         $validated = $request->validate([
             'name' => 'ascii|required',
-            'email' => 'required',
+            'email' => 'required|email|unique:users,email',
             'password' => 'ascii|required'
         ]);
-
-
+        user::create($validated);
         return redirect()->route("user.index");
     }
 

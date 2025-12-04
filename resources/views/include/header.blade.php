@@ -29,12 +29,14 @@ function active($str)
                     <a class="nav-link <?php active('info'); ?>" href="/info">info</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php active('login'); ?>" href="{{ route('user.create') }}">login</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php active('devs'); ?>" href="/devs">*devs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php active('login'); ?>" href="{{ route('user.create') }}">login</a>
+                    <a class="nav-link <?php active('allUser'); ?>" href="{{ route('user.index') }}">*all users</a>
                 </li>
             </ul>
         </nav>
     </header>
-
