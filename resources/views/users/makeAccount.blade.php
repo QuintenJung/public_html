@@ -14,6 +14,8 @@
     <input type="text" id="email" name="email" class="inputText" placeholder="Enter your email here..."><br>
     <h2>password:</h2>
     <input type="password" id="password" name="password" class="inputText" placeholder="Enter your password here..."><br>
+    <h2>herhaal password:</h2>
+    <input type="password" id="password_confirmation" name="password_confirmation" class="inputText" placeholder="Enter your password here..."><br>
     <button type="submit" id="submitButton">Done</button>
 </form>
 

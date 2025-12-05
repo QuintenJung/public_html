@@ -35,7 +35,7 @@ class UsersController extends Controller
         $validated = $request->validate([
             'name' => 'ascii|required',
             'email' => 'required|email|unique:users,email',
-            'password' => 'ascii|required'
+            'password' => 'ascii|required|confirmed'
         ]);
         $user = User::create([
             'name' => $validated['name'],
@@ -97,14 +97,23 @@ class UsersController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $login = $request->input('login');
+        $password = $request->input('password');
+
+        $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
+
+        $credentials = [
+            $field => $login,
+            'password' => $password,
+        ];
 
         if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
             return redirect()->route('home');
         }
 
         return back()->withErrors([
-            'email' => 'De ingevoerde gegevens zijn onjuist.',
+            'login' => 'De ingevoerde gegevens zijn onjuist.',
         ]);
     }
 }
