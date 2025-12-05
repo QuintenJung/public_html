@@ -8,7 +8,7 @@ use Pest\Support\View;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/info', function () {
     return view('info');

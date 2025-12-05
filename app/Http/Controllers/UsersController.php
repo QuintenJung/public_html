@@ -78,7 +78,6 @@ class UsersController extends Controller
         $user = $userInfo->update([
             'name' => $validated['name'],
         ]);
-        // Auth::login($user);
         $request->session()->regenerate();
         return redirect()->route("user.index");
     }
@@ -101,7 +100,7 @@ class UsersController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('user.index');
+            return redirect()->route('home');
         }
 
         return back()->withErrors([

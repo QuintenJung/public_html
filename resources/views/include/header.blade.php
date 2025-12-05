@@ -38,10 +38,13 @@ function active($str)
                     <a class="nav-link <?php active('allUser'); ?>" href="/user">*all users</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php active('allUser'); ?>" href="/user/{{ Auth::user()->id }}/edit">*edit</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php active('login'); ?>" href="/user/login">*login</a>
                 </li>
             </ul>
             {{-- username --}}
-            {{ Auth::user()->name }}                
+            {{ Auth::user()->name }}
         </nav>
     </header>
