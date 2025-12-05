@@ -38,13 +38,22 @@ function active($str)
                     <a class="nav-link <?php active('allUser'); ?>" href="/user">*all users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php active('allUser'); ?>" href="/user/{{ Auth::user()->id }}/edit">*edit</a>
+                    <a class="nav-link <?php active('allUser'); ?>" href="/user/{{ Auth::user()?->id }}/edit">*edit</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php active('login'); ?>" href="/user/login">*login</a>
                 </li>
+                <form action="/user/{{ Auth::user()?->id }}" method="POST" class="nav-item">
+                    @csrf
+                    @method('DELETE')
+                    <button class="nav-link" type="submit" id="deleteButton">*Delete account</button>
+                </form>
+                <li class="nav-item">
+                    <a class="nav-link <?php active('Logout'); ?>" href="/Logout">*logout</a>
+                </li>
             </ul>
+            
             {{-- username --}}
-            {{ Auth::user()->name }}
+            {{ Auth::user()?->name }}
         </nav>
     </header>

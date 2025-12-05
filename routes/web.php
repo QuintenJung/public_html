@@ -26,4 +26,5 @@ Route::get('/loggedin', function () {
 // Route::re('user', UsersController::class);
 Route::get('/user/login', [UsersController::class, 'showLoginForm']);
 Route::post('/user/login', [UsersController::class, 'login']);
+Route::get('/logout', [UsersController::class, 'logout'])->name("Logout");
 Route::resource('/user', UsersController::class);

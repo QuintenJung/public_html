@@ -87,7 +87,20 @@ class UsersController extends Controller
      */
     public function destroy(user $user)
     {
-        //
+        $userInfo = user::find($user)[0];
+        $userInfo->delete();
+        return redirect()->route('Logout');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+ 
+        // Invalidate session
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+ 
+        return redirect('/');
     }
 
     public function showLoginForm()
