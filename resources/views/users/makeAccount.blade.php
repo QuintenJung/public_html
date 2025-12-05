@@ -1,13 +1,15 @@
 <?php
     global $title;
-    $title = "login";
+    $title = "account aanmaken";
 ?>
 
 @extends("layouts.form")
 
 @section("content")
-<form action="/user/login" method="POST">
+<form action="/user" method="POST">
     @csrf
+    <h2>name:</h2>
+    <input type="text" id="name" name="name" class="inputText"placeholder="Enter your username here..."><br>
     <h2>email:</h2>
     <input type="text" id="email" name="email" class="inputText" placeholder="Enter your email here..."><br>
     <h2>password:</h2>

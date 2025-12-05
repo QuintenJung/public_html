@@ -102,6 +102,10 @@
 
             Route::resource('[PAGE]', [NAME]Controller::class)
 
+    bijveiligde Route:
+        door ->middleware('augt') achter een route te doen kan je er aleen in als je bent ingelogt
+        dit is verkeert gespeeld dus google de juiste spelling
+
 [devCMD-3]
     handig .blade function:
         ten eerst: 

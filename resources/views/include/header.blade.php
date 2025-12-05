@@ -29,7 +29,7 @@ function active($str)
                     <a class="nav-link <?php active('info'); ?>" href="/info">info</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php active('login'); ?>" href="{{ route('user.create') }}">login</a>
+                    <a class="nav-link <?php active('account aanmaken'); ?>" href="/user/create">maak acc</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php active('devs'); ?>" href="/devs">*devs</a>
@@ -37,6 +37,11 @@ function active($str)
                 <li class="nav-item">
                     <a class="nav-link <?php active('allUser'); ?>" href="/user">*all users</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php active('login'); ?>" href="/user/login">*login</a>
+                </li>
             </ul>
+            {{-- username --}}
+            {{ Auth::user()->name }}                
         </nav>
     </header>

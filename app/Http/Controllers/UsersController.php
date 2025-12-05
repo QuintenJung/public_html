@@ -24,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.login');
+        return view('users.makeAccount');
     }
 
     /**
@@ -53,7 +53,7 @@ class UsersController extends Controller
     public function show(user $user)
     {
         $userInfo = user::find($user);
-        return view("users.userInfo",["userInfo" => $userInfo]);
+        return view("users.userInfo", ["userInfo" => $userInfo]);
     }
 
     /**
@@ -63,7 +63,7 @@ class UsersController extends Controller
     {
         $userInfo = user::find($user);
         // return "test";
-        return view("users.editUser",["userInfo" => $userInfo]);
+        return view("users.editUser", ["userInfo" => $userInfo]);
     }
 
     /**
@@ -89,5 +89,23 @@ class UsersController extends Controller
     public function destroy(user $user)
     {
         //
+    }
+
+    public function showLoginForm()
+    {
+        return view('users.login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            return redirect()->route('user.index');
+        }
+
+        return back()->withErrors([
+            'email' => 'De ingevoerde gegevens zijn onjuist.',
+        ]);
     }
 }
