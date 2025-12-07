@@ -12,7 +12,6 @@ $title = 'allBugs';
             <a href="/bug/{{$bug['id']}}">{{ $bug['title'] }}</a>
             <p>{{ $bug['content'] }}</p>
             @if ($bug['userInfo']!= "lockedOut")
-                <p>{{json_decode($bug['userInfo'])->name}}</p>
                 <p>{{json_decode($bug['userInfo'])->email}}</p>
             @endif
         </div>

@@ -60,17 +60,33 @@ class BugsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(bugs $bugs)
+    public function edit($id)
     {
-        //
+        $bugData = bugs::find($id);
+        return view('bugs.editBugs', ['data'=> $bugData]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, bugs $bugs)
+    public function update(Request $request, $id)
     {
-        //
+          $validated = $request->validate([
+            'title' => 'ascii',
+            'content' => ''
+        ]);
+        $bugData = bugs::find($id);
+        if($validated['content'] != null){
+            $bug = $bugData->update([
+                'content' => $validated['content']
+            ]);
+        };
+        if($validated['title'] != null){
+            $bug = $bugData->update([
+                'title' => $validated['title']
+            ]);
+        };
+        return redirect()->route("bug.index");
     }
 
     /**
