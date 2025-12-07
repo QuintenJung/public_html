@@ -49,7 +49,7 @@ function active($str)
                     <button class="nav-link" type="submit" id="deleteButton">*Delete account</button>
                 </form>
                 <li class="nav-item">
-                    <a class="nav-link <?php active('Logout'); ?>" href="/Logout">*logout</a>
+                    <a class="nav-link <?php active('logout'); ?>" href="/logout">*logout</a>
                 </li>
             </ul>
             

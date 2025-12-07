@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BugsController;
 use App\http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Pest\Support\View;
@@ -26,5 +27,6 @@ Route::get('/loggedin', function () {
 // Route::re('user', UsersController::class);
 Route::get('/user/login', [UsersController::class, 'showLoginForm']);
 Route::post('/user/login', [UsersController::class, 'login']);
-Route::get('/logout', [UsersController::class, 'logout'])->name("Logout");
+Route::get('/logout', [UsersController::class, 'logout'])->name("logout");
 Route::resource('/user', UsersController::class);
+Route::resource('/bug', BugsController::class);
