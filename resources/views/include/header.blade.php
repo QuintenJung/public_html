@@ -18,44 +18,42 @@ function active($str)
 ?>
 
 <body>
-    <header class="shadow bg-black" style="z-index:1000;">
-        <div class="shadow bg-black" id="flex">
+    <header>
         <img src="{{ asset('images/favicon-32x32.png') }}" id="logo">
-        <nav class="navbar navbar-expand-sm nav-pills">
-            <ul class="nav nav-pills ms-3">
-                <li class="nav-item">
-                    <a class="nav-link <?php active('home'); ?>" href="/">home</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('info'); ?>" href="/info">info</a>
+                <li>
+                    <a href="/info">info</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('account aanmaken'); ?>" href="/user/create">maak acc</a>
+                <li>
+                    <a href="/user/create">maak acc</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('devs'); ?>" href="/devs">*devs</a>
+                <li>
+                    <a href="/devs">*devs</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('allUser'); ?>" href="/user">*all users</a>
+                <li>
+                    <a href="/user">*all users</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('allUser'); ?>" href="/user/{{ Auth::user()?->id }}/edit">*edit</a>
+                <li>
+                    <a href="/user/{{ Auth::user()?->id }}/edit">*edit</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('login'); ?>" href="/user/login">*login</a>
+                <li>
+                    <a href="/user/login">*login</a>
                 </li>
-                <form action="/user/{{ Auth::user()?->id }}" method="POST" class="nav-item">
+                <form action="/user/{{ Auth::user()?->id }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button class="nav-link" type="submit" id="deleteButton">*Delete account</button>
+                    <button type="submit" id="deleteButton">*Delete account</button>
                 </form>
-                <li class="nav-item">
-                    <a class="nav-link <?php active('Logout'); ?>" href="/Logout">*logout</a>
+                <li>
+                    <a href="/Logout">*logout</a>
                 </li>
             </ul>
-            
+
             {{-- username --}}
             {{ Auth::user()?->name }}
         </nav>
-        </div>
     </header>

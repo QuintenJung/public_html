@@ -1,16 +1,33 @@
+/* 
+colors:
+amber-50
+amber-500
+gray-800
+*/
+
+
 footer {
     height: 16em;
     box-shadow: 0 -10px 5px #0000001a;
+    display: flex;
+    @apply bg-amber-50;
 
-    div{
+    div {
         height: 100%;
-    }
-    div div {
-        height: 100%;
-        color: #f8f9fa;
-        background-repeat: no-repeat;
-        background-position: 115%;
-        background-size: 50%;
+        width: 25%;
+        padding: 14px 7px;
+
+        div {
+            @apply bg-amber-500;
+            height: 100%;
+            width: 100%;
+            color: #f8f9fa;
+            padding: 25px;
+            border-radius: 25px;
+            background-repeat: no-repeat;
+            background-position: 115%;
+            background-size: 50%;
+        }
     }
 
     div:nth-child(3) div {
@@ -23,10 +40,58 @@ footer {
         background-size: 45%;
     }
 }
- .navbar-expand-sm{
+header {
+    display: flex;
+    height: 9dvh;
+    @apply bg-gray-800;
+
+    img {
+        height: 9dvh;
+    }
+
+    ul {
+        display: flex;
+        height: 100%;
+
+        form,
+        li {
+            @apply bg-amber-500 hover:bg-amber-600 transition rounded-full;
+            display: flex;
+            height: 30%;
+            margin: auto 10px;
+            padding: 0 15px;
+
+
+            button,
+            a {
+                @apply font-semibold text-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                font-size: 120%;
+            }
+        }
+    }
+}
+
+.background-video{
+    @apply absolute w-full min-h-full h-auto max-w-full -z-10;
+}
+
+main{}
+
+
+
+
+
+/* hier verder met de rework */
+
+.navbar-expand-sm {
     justify-content: flex-end !important;
 }
-.z-index-n1{
+
+.z-index-n1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -34,17 +99,13 @@ footer {
     z-index: -1;
 }
 
-#flex{
+#flex {
     display: flex;
     justify-content: space-between;
     width: 100dvw;
 }
 
-#footer{
-    width: 100dvw;
-}
-
-#wrapper{
+#wrapper {
     font-size: small;
     padding-left: 1dvw;
     padding-right: 1dvw;
@@ -59,30 +120,13 @@ footer {
     border: 1px solid black;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    height: 9dvh;
-    z-index: 1000;
-    img {
-            height: 9dvh;
-        }
 
-    nav {
-        padding: 0 !important;
-        align-items: start;
-        background-color: black;
-        li {
-            margin-right: 10px;
-        }
-    }
-}
 
 main {
-    min-height: calc(100dvh - 7dvh - 16em);
+    min-height: calc(100dvh - 9dvh - 16em);
 }
 
-*{
+* {
     z-index: 1;
 }
 
@@ -115,7 +159,7 @@ main {
     border: 1px solid black;
 }
 
-#ass_form{
+#ass_form {
     padding-top: 1dvw;
     color: black;
     background-color: rgb(255, 255, 255);

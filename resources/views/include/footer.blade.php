@@ -1,9 +1,7 @@
-<footer class="bg-light flex">
-    <div class="bg-light flex" id="footer">
-    <div class="col-3 p-3">
-        <div class="bg-primary border rounded-3 p-2 ps-4"
-            style="background-image: url('{{ asset('images/home.png') }}');">
-            <p class="text-light">
+<footer>
+    <div>
+        <div style="background-image: url('{{ asset('images/home.png') }}');">
+            <p>
             <h4>Adres</h4>
             Oranje Nassau College Parkdreef<br>
             mavo havo vwo technasium<br>
@@ -14,18 +12,16 @@
             </p>
         </div>
     </div>
-    <div class="col-3 p-3">
-        <div class="bg-primary border rounded-3 p-2 ps-4"
-            style="background-image: url('{{ asset('images/info.png') }}');">
-            <p class="text-light">
+    <div>
+        <div style="background-image: url('{{ asset('images/info.png') }}');">
+            <p>
             <h4>Snel naar *info tabs*</h4>
             </p>
         </div>
     </div>
-    <div class="col-3 p-3">
-        <div class="bg-primary border rounded-3 p-2 ps-4"
-            style="background-image: url('{{ asset('images/dev.png') }}');">
-            <p class="text-light">
+    <div>
+        <div style="background-image: url('{{ asset('images/dev.png') }}');">
+            <p>
             <h4>devs *links naar dev paginas*</h4>
             Tiemo Verbove<br>
             Jasper Bruijn<br>
@@ -34,15 +30,13 @@
             </p>
         </div>
     </div>
-    <div class="col-3 p-3">
-        <div class="bg-primary border rounded-3 p-2 ps-4"
-            style="background-image: url('{{ asset('images/phone.png') }}');">
-            <p class="text-light">
+    <div>
+        <div style="background-image: url('{{ asset('images/phone.png') }}');">
+            <p>
             <h4>Volg ons op *link naar media*</h4>
             </p>
         </div>
     </div>
-</div>
 </footer>
 </body>
 
