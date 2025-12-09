@@ -14,7 +14,7 @@
 
 @section('content')
 
-      <div id="wrapper">
+      <div id="wrapper" class="btn">
         <p>dit is de home pagina</p>
       </div>
 @endsection

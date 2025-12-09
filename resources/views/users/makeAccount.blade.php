@@ -6,6 +6,9 @@
 @extends("layouts.form")
 
 @section("content")
+<div>
+        <img src="{{ asset('images/ONC-persoonlijk-768x542.jpg') }}" class="backgroundImg">
+    </div>
 <div class="d-flex justify-content-center px-4 py-4" id="ass_form">
 <form action="/user" method="POST">
     @csrf
@@ -13,15 +16,15 @@
     <label class="form-label">name:</label>
     <input type="text" id="name" name="name" class="form-control" placeholder="Enter your username here...">
     </div>
-    <div>
+    <div class="mb-3">
     <label class="form-label">email:</label>
     <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email here...">
     </div>
-    <div>
+    <div class="mb-3">
     <label class="form-label">password:</label>
     <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password here...">
     </div>
-    <div>
+    <div class="mb-3">
     <label class="form-label">herhaal password:</label>
     <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Enter your password here...">
     </div>
