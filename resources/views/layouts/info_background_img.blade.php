@@ -2,7 +2,7 @@
 
 <main>
     <div>
-        <img src="{{ asset('images/temp_background_img.webp') }}" class="backgroundImg">
+        <img src="{{ asset('images/jongens-in-de-klas-768x542.jpg') }}" class="backgroundImg">
     </div>
     @yield('content')
 </main>

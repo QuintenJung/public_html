@@ -23,17 +23,54 @@ footer {
         background-size: 45%;
     }
 }
+ .navbar-expand-sm{
+    justify-content: flex-end !important;
+}
+.z-index-n1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100dvw;
+}
+
+#footer{
+    width: 100dvw;
+}
+
+#wrapper{
+    font-size: small;
+    padding-left: 1dvw;
+    padding-right: 1dvw;
+    padding-top: 0.5dvw;
+    padding-bottom: 0.5dvw;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    position: relative;
+    top: 70px;
+    float: right;
+}
 
 header {
-    height: 7dvh;
+    display: flex;
+    justify-content: space-between;
+    height: 9dvh;
+    z-index: 1000;
+    img {
+            height: 9dvh;
+        }
 
     nav {
         padding: 0 !important;
-
-        img {
-            height: 7dvh;
-        }
-
+        align-items: start;
+        background-color: black;
         li {
             margin-right: 10px;
         }
@@ -42,6 +79,10 @@ header {
 
 main {
     min-height: calc(100dvh - 7dvh - 16em);
+}
+
+*{
+    z-index: 1;
 }
 
 #infoText {
@@ -55,8 +96,8 @@ main {
 }
 
 .backgroundImg {
-    width: 100vw;
-    position: absolute;
+    width: 100dvw;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -69,8 +110,20 @@ main {
 }
 
 #submitButton {
-    background-color: greenyellow;
+    background-color: orange;
     border: 1px solid black;
+}
+
+#ass_form{
+    padding-top: 1dvw;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border: 2px solid black;
+    width: 50vw;
+    margin-top: 1vh;
+    padding: 2em;
+    border-radius: 2em;
 }
 
 .profileCardShell {

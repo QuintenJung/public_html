@@ -18,9 +18,10 @@ function active($str)
 ?>
 
 <body>
-    <header class="shadow bg-light">
+    <header class="shadow bg-black" style="z-index:1000;">
+        <div class="shadow bg-black" id="flex">
+        <img src="{{ asset('images/favicon-32x32.png') }}" id="logo">
         <nav class="navbar navbar-expand-sm nav-pills">
-            <img src="{{ asset('images/logoONC.png') }}" id="logo">
             <ul class="nav nav-pills ms-3">
                 <li class="nav-item">
                     <a class="nav-link <?php active('home'); ?>" href="/">home</a>
@@ -56,4 +57,5 @@ function active($str)
             {{-- username --}}
             {{ Auth::user()?->name }}
         </nav>
+        </div>
     </header>

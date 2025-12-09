@@ -1,4 +1,5 @@
 <footer class="bg-light flex">
+    <div class="bg-light flex" id="footer">
     <div class="col-3 p-3">
         <div class="bg-primary border rounded-3 p-2 ps-4"
             style="background-image: url('{{ asset('images/home.png') }}');">
@@ -41,6 +42,7 @@
             </p>
         </div>
     </div>
+</div>
 </footer>
 </body>
 
