@@ -12,23 +12,24 @@ function active($str)
 {
     global $title;
     if ($str === $title) {
-        echo 'active';
+        echo 'class="active"';
     }
 }
 ?>
 
 <body>
     <header>
-        <img src="{{ asset('images/favicon-32x32.png') }}" id="logo">
+        {{-- <img src="{{ asset('images/favicon-32x32.png') }}" id="logo"> --}}
+        <a href="/">OrangeQuest</a>
         <nav>
             <ul>
-                <li>
+                {{-- <li>
                     <a href="/">home</a>
-                </li>
+                </li> --}}
                 <li>
-                    <a href="/info">info</a>
+                    <a <?= active("info") ?> href="/info">wat is orangequest?</a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="/user/create">maak acc</a>
                 </li>
                 <li>
@@ -50,10 +51,10 @@ function active($str)
                 </form>
                 <li>
                     <a href="/Logout">*logout</a>
-                </li>
+                </li> --}}
             </ul>
 
             {{-- username --}}
-            {{ Auth::user()?->name }}
+            {{-- {{ Auth::user()?->name }} --}}
         </nav>
     </header>
