@@ -43,7 +43,7 @@
     </div>
     <script>
         function lavaLampLama() {
-            window.location.href = "/devs/controlRoom"
+            window.location.href = "/controlRoom"
         }
     </script>
 </footer>
