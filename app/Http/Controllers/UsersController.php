@@ -89,7 +89,7 @@ class UsersController extends Controller
     {
         $userInfo = user::find($user)[0];
         $userInfo->delete();
-        return redirect()->route('Logout');
+        return redirect()->route('logout');
     }
 
     public function logout(Request $request)
