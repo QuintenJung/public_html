@@ -6,18 +6,31 @@
 @extends("layouts.form")
 
 @section("content")
+<div>
+        <img src="{{ asset('images/ONC-persoonlijk-768x542.jpg') }}" class="backgroundImg">
+    </div>
+<div class="d-flex justify-content-center px-4 py-4" id="ass_form">
 <form action="/user" method="POST">
     @csrf
-    <h2>name:</h2>
-    <input type="text" id="name" name="name" class="inputText"placeholder="Enter your username here..."><br>
-    <h2>email:</h2>
-    <input type="text" id="email" name="email" class="inputText" placeholder="Enter your email here..."><br>
-    <h2>password:</h2>
-    <input type="password" id="password" name="password" class="inputText" placeholder="Enter your password here..."><br>
-    <h2>herhaal password:</h2>
-    <input type="password" id="password_confirmation" name="password_confirmation" class="inputText" placeholder="Enter your password here..."><br>
-    <button type="submit" id="submitButton">Done</button>
+    <div class="mb-3">
+    <label class="form-label">name:</label>
+    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your username here...">
+    </div>
+    <div class="mb-3">
+    <label class="form-label">email:</label>
+    <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email here...">
+    </div>
+    <div class="mb-3">
+    <label class="form-label">password:</label>
+    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password here...">
+    </div>
+    <div class="mb-3">
+    <label class="form-label">herhaal password:</label>
+    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Enter your password here...">
+    </div>
+    <button type="submit" class="btn btn-primary" id="submitButton">Done</button>
 </form>
+</div>
 
     @if ($errors->any())
         @foreach ($errors->all() as $error)
