@@ -5,7 +5,9 @@ $title = 'userInfo';
 @extends('layouts.def')
 @section("content")
 <div>
-    <p>{{$userInfo[0]["name"]}}</p>
+    <li>
+        <a href="/user/{{ Auth::user()?->id }}/edit">{{$userInfo[0]["name"]}}</a>
+    </li>
     <p>{{$userInfo[0]["email"]}}</p>
 </div>
 @endsection

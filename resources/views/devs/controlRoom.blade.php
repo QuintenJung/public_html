@@ -16,9 +16,7 @@ $title = 'controlRoom';
     @if( Auth::user()?->id != "" )
     <a href="user/{{ Auth::user()?->id }}">accountInfo</a>
     @else
-    <a href="user/login">logIn</a>
-    <h5>or</h5>
-    <a href="user/create">create a account</a>
+    <span><a href="user/login">logIn</a> <p> or </p> <a href="user/create">create a account</a></span>
     @endif
 </li>
 <li>
@@ -28,7 +26,7 @@ $title = 'controlRoom';
     <a href="/logout">logOut</a>
 </li>
 <li>
-    <a href="user/login">logIn</a>
+    <a href="user/{{ Auth::user()?->id }}">accountInfo</a>
 </li>
 <P>
 {{ Auth::user()?->name }}
