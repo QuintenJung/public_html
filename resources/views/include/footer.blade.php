@@ -37,6 +37,11 @@
             </p>
         </div>
     </div>
+    <script>
+        function lavaLampLama() {
+            window.location.href = "/controlRoom"
+        }
+    </script>
 </footer>
 </body>
 

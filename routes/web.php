@@ -24,6 +24,10 @@ Route::get('/loggedin', function () {
     return "DIPSHIT";
 });
 
+Route::get('/controlRoom', function () {
+    return view('/devs/controlRoom');
+});
+
 // Route::re('user', UsersController::class);
 Route::get('/user/login', [UsersController::class, 'showLoginForm']);
 Route::post('/user/login', [UsersController::class, 'login']);
