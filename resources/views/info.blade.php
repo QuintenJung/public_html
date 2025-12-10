@@ -95,7 +95,7 @@ $title = 'info';
         </span><br>
         Start: voorjaar 2026<br>
         Inschrijven & info:<br>
-        Finale: jubileumviering ONC Parkdreef – juni/juli 2026<br><br>
+        Finale: jubileumviering ONC Parkdreef – donderdag 18 juni 2026<br><br>
         <span class="sub-title">
             9. Call to Action
         </span><br>

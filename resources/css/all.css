@@ -43,23 +43,38 @@ footer {
 }
 
 header {
+    @apply bg-slate-900;
     display: flex;
-    height: 9dvh;
-    @apply bg-gray-800;
+    height: 15dvh;
+    justify-content: space-between;
 
-    img {
-        height: 9dvh;
-    }
-
-    a {
-        @apply text-amber-500;
-        font-size: 200%;
+    div{
+        /* @apply bg-amber-900; */
+        width: 33%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        margin: 0 10px 0 20px;
+        flex-wrap: wrap;
+        margin: 0 0 0 15px;
+
+        img{
+            height: 10dvh;  
+        }
+        a{
+            @apply text-amber-500;
+            font-size: 7.6dvh;
+            line-height: 7.5dvh;
+            margin: 1.25dvh;
+        }
+        p{
+            @apply text-amber-50;
+            width: 100%;
+            font-size: 2.5dvh;
+            line-height: 5dvh;
+            text-align: center;
+        }
+
+
     }
+
 
     ul {
         display: flex;
@@ -80,19 +95,26 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 120%;
+                font-size: 150%;
                 margin: 0
             }
 
             .active {
-                @apply decoration-blue-600;
+                @apply decoration-blue-500;
             }
         }
     }
 }
 
+.nieuws-bar{
+    @apply bg-gray-800 text-amber-500;
+    padding: 0 0 10px 20px;
+    font-size: 125%
+}
+
 .background-video {
     @apply fixed w-full min-h-full h-auto max-w-full -z-10;
+    top: 0;
 }
 
 main {
@@ -120,6 +142,17 @@ main {
                 text-decoration: none;
                 margin-left: 25px;
             }
+        }
+    }
+
+    .content{
+        display: flex;
+        position: absolute;
+        bottom: -50;
+        /* margin: 50dvh 0 0 0; */
+
+        video{
+            width: calc(100%/3);
         }
     }
 
@@ -154,13 +187,7 @@ main {
     justify-content: flex-end !important;
 }
 
-.z-index-n1 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
+
 
 #flex {
     display: flex;

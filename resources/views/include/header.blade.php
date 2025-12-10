@@ -19,15 +19,15 @@ function active($str)
 
 <body>
     <header>
-        {{-- <img src="{{ asset('images/favicon-32x32.png') }}" id="logo"> --}}
-        <a href="/">OrangeQuest</a>
+        <div>
+            <img src="{{ asset('images/favicon-32x32.png') }}" id="logo">
+            <a href="/">Orange Quest</a>
+            <p>IT competitie voor mavo, havo of vwo teams</p>
+        </div>
         <nav>
             <ul>
-                {{-- <li>
-                    <a href="/">home</a>
-                </li> --}}
                 <li>
-                    <a <?= active("info") ?> href="/info">wat is orangequest?</a>
+                    <a <?= active("info") ?> href="/info">Wat is Orange Quest?</a>
                 </li>
                 {{-- <li>
                     <a href="/user/create">maak acc</a>
@@ -58,3 +58,4 @@ function active($str)
             {{-- {{ Auth::user()?->name }} --}}
         </nav>
     </header>
+

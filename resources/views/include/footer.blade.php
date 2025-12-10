@@ -1,4 +1,4 @@
-<footer>
+<footer style="display: none" >
     <div>
         <div style="background-image: url('{{ asset('images/home.png') }}');">
             <p>
@@ -37,12 +37,12 @@
             </p>
         </div>
     </div>
-    <script>
-        function lavaLampLama() {
-            window.location.href = "/controlRoom"
-        }
-    </script>
 </footer>
+<script>
+    function lavaLampLama() {
+        window.location.href = "/controlRoom"
+    }
+</script>
 </body>
 
 </html>

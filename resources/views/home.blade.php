@@ -22,4 +22,18 @@ $title = 'home';
             <p>lorem</p>
         </a>
     </div>
+    <div class="content">
+        <video >
+            <source src="{{ asset('images/onc_parkdreef.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video >
+            <source src="{{ asset('images/onc_parkdreef.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video>
+            <source src="{{ asset('images/onc_parkdreef.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 @endsection
