@@ -15,6 +15,10 @@ $title = 'controlRoom';
 <li>
     @if( Auth::user()?->id != "" )
     <a href="user/{{ Auth::user()?->id }}">accountInfo</a>
+    @else
+    <a href="user/login">logIn</a>
+    <h5>or</h5>
+    <a href="user/create">create a account</a>
     @endif
 </li>
 <li>
