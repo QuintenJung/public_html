@@ -3,7 +3,8 @@
     $title = "info";
 ?>
 
-@extends('layouts.info_background_img')
+@extends('layouts.def')
+
 
 
 @section('content')

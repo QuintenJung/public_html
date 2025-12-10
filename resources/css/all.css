@@ -76,7 +76,7 @@ header {
 }
 
 .background-video{
-    @apply absolute w-full min-h-full h-auto max-w-full -z-10;
+    @apply fixed w-full min-h-full h-auto max-w-full -z-10;
 }
 
 main{}

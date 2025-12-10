@@ -13,7 +13,5 @@
 @endsection
 
 @section('content')
-      <div id="wrapper">
-        <p>dit is de home pagina</p>
-      </div>
+      
 @endsection
