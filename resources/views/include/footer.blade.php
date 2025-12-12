@@ -1,4 +1,4 @@
-<footer style="display: none" >
+<footer>
     <div>
         <div style="background-image: url('{{ asset('images/home.png') }}');">
             <p>

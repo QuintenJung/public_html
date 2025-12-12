@@ -1,5 +1,8 @@
 @include('include.header')
-<main>
+
+@yield('background')
+
+<main class="formMain">
 @yield('content')
 </main>
 

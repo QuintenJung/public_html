@@ -1,41 +1,58 @@
 <?php
-    global $title;
-    $title = "account aanmaken";
+global $title;
+$title = 'account aanmaken';
 ?>
 
-@extends("layouts.form")
 
-@section("content")
-<div>
+
+
+
+@extends('layouts.form')
+
+@section('background')
+    <div>
         <img src="{{ asset('images/ONC-persoonlijk-768x542.jpg') }}" class="backgroundImg">
     </div>
-<div class="d-flex justify-content-center px-4 py-4" id="ass_form">
-<form action="/user" method="POST">
-    @csrf
-    <div class="mb-3">
-    <label class="form-label">name:</label>
-    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your username here...">
+@endsection
+
+
+
+
+@section('content')
+    <div>
+        <div>
+            <form action="/user" method="POST">
+                @csrf
+                <div>
+                    <label>Name</label><br>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label>Email</label><br>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div>
+                    <label>Password</label><br>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div>
+                    <label>Herhaal Password</label><br>
+                    <input type="password" id="password_confirmation" name="password_confirmation">
+                </div><br>
+                <button type="submit" id="submitButton">Done</button>
+            </form>
+        </div>
     </div>
-    <div class="mb-3">
-    <label class="form-label">email:</label>
-    <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email here...">
+
+
+    <div>
+        <img src="{{ asset('images/logoONC.png') }}">
     </div>
-    <div class="mb-3">
-    <label class="form-label">password:</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password here...">
-    </div>
-    <div class="mb-3">
-    <label class="form-label">herhaal password:</label>
-    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Enter your password here...">
-    </div>
-    <button type="submit" class="btn btn-primary" id="submitButton">Done</button>
-</form>
-</div>
 
     @if ($errors->any())
         @foreach ($errors->all() as $error)
             {{ $error }}<br>
         @endforeach
     @endif
-    
+
 @endsection
