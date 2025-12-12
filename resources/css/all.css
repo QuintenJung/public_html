@@ -211,15 +211,14 @@ main {
         }
     }
 
-    &>div:nth-child(2) {
-        width: 50%;
-    }
-
     .content{
         display: flex;
-        bottom: 13em;
+        position: absolute;
+        bottom: 11em;
         iframe{
-            width: calc(100vw/3);
+            width: calc(99.4vw/3);
+            padding: 0;
+            margin: 0;
             aspect-ratio: 16/9;
         }
     }
