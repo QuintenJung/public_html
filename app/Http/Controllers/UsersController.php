@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EditPassword;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
+
+use App\Mail\OrderShipped;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Mail;
 
 class UsersController extends Controller
 {
@@ -95,11 +100,11 @@ class UsersController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
- 
+
         // Invalidate session
         $request->session()->invalidate();
         $request->session()->regenerateToken();
- 
+
         return redirect('/');
     }
 
@@ -128,5 +133,12 @@ class UsersController extends Controller
         return back()->withErrors([
             'login' => 'De ingevoerde gegevens zijn onjuist.',
         ]);
+    }
+
+    public function passwordVergeten($id)
+    {  
+        $userInfo = user::findOrFail($id);
+        // return $userInfo;
+        Mail::to($userInfo)->send(new EditPassword());
     }
 }
