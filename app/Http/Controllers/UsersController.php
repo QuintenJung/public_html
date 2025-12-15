@@ -140,5 +140,6 @@ class UsersController extends Controller
         $userInfo = user::findOrFail($id);
         // return $userInfo;
         Mail::to($userInfo)->send(new EditPassword());
+        return "shit";
     }
 }

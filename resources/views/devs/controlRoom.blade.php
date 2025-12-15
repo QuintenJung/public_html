@@ -30,7 +30,7 @@ $title = 'controlRoom';
 </li>
 
 <li>
-    <a href="/resetPassword">resetPassword</a>
+    <a href="user/{{ Auth::user()?->id }}/resetPassword">resetPassword</a>
 </li>
 
 <P>
