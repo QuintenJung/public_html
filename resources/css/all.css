@@ -24,8 +24,8 @@ footer {
             height: 100%;
             width: 100%;
             color: #f8f9fa;
-            padding: 25px;
-            border-radius: 25px;
+            padding: 2vh;
+            border-radius: 5vh;
             background-repeat: no-repeat;
             background-position: 115%;
             background-size: 50%;
@@ -197,7 +197,7 @@ main {
     min-height: calc(138dvh - 9dvh - 26vh);
 
     .news {
-        width: 30dvw;
+        width: 600px;
         position: absolute;
         right: 0;
         top: 100;

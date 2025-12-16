@@ -8,7 +8,7 @@
             Parkdreef 282<br>
             2724 EZ Zoetermeer<br>
             079-341 10 41<br>
-            parkdreef@onc.unicoz.nl<br>
+            orangequest@unicoz.nl<br>
             </p>
         </div>
     </div>
