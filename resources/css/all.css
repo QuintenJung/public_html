@@ -5,15 +5,22 @@ amber-500
 gray-800
 blue-600
 */
-
-
+/* don't touch the body */
+body {
+    background-color: transparent !important;
+}
 footer {
     height: 30vh;
     box-shadow: 0 -10px 5px #0000001a;
     display: flex;
     @apply bg-amber-50;
     font-size: 20px;
-
+    button{
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        border-radius: 50%;
+    }
     div {
         height: 100%;
         width: 25%;
@@ -198,6 +205,7 @@ header {
 
 main {
     min-height: calc(138dvh - 9dvh - 26vh);
+    
 
     .news {
         width: 600px;
