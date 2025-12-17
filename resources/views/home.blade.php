@@ -1,6 +1,6 @@
 <?php
 global $title;
-$title = 'home';
+$title = 'Home';
 ?>
 
 @extends('layouts.def')
@@ -14,12 +14,12 @@ $title = 'home';
 
 @section('content')
     <div class="news">
-        <a>
-            <p>lorem</p>
+        <a href="https://parkdreef.onc.nl/lustrum-50-jaar/">
+            <p>Deze wedstijd is voor ons het 50 jaar lustrum, lees er hier meer over!</p>
         </a>
         <a>
             <img src="{{ asset('images/jongens-in-de-klas-768x542.jpg') }}">
-            <p>lorem</p>
+            <p>Het inschrijven voor de wedstrijd begint op 15 januari.</p>
         </a>
     </div>
     <div class="content">

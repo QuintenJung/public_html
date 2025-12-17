@@ -20,9 +20,9 @@ function active($str)
 <body>
     <header>
         <div>
-            <img src="{{ asset('images/favicon-32x32.png') }}" id="logo">
-            <a href="/">Orange Quest</a>
-            <p>IT competitie voor mavo, havo of vwo teams</p>
+            <a href="/">
+                <img src="{{ asset('images/orangequest-header.png') }}" id="logo">
+            </a>
         </div>
         <nav>
             <ul>
