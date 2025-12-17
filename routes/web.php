@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BugsController;
+use App\Http\Controllers\ResetTokensController;
 use App\http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Pest\Support\View;
@@ -35,3 +36,5 @@ Route::get('/user/{id}/resetPassword', [UsersController::class, 'passwordVergete
 Route::resource('/user', UsersController::class);
 
 Route::resource('/bug', BugsController::class);
+
+Route::resource('/token', ResetTokensController::class);

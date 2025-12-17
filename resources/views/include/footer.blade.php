@@ -31,7 +31,7 @@
     <div>
         <div style="background-image: url('{{ asset('images/dev.png') }}');">
             <p>
-            <h4>devs *links naar dev paginas*</h4>
+            <h4>devs</h4>
             Tiemo Verbove<br>
             Jasper Bruijn<br>
             Quinten Jungschlager<br>
@@ -42,7 +42,16 @@
     <div>
         <div style="background-image: url('{{ asset('images/phone.png') }}');">
             <p>
-            <h4>Volg ons op *link naar media*</h4>
+            <h4>Volg ons op</h4>
+            <h4>ONC parkdreef:</h4>
+            <div class="logo">
+                
+            <a href="https://www.facebook.com/ONCParkdreef/"><img class="socialeLogo" src="{{ asset('images/facebookLogo.png') }}" alt="facebook"></a>
+            <a href="https://www.instagram.com/oncparkdreef/"><img class="socialeLogoInsta" src="{{ asset('images/instagramLogo.png') }}" alt="intagram"></a>
+            <a href="https://www.linkedin.com/company/onc-parkdreef"><img class="socialeLogo" src="{{ asset('images/linkedinLogo.png') }}" alt="linkedin"></a>
+            <a href="https://www.youtube.com/user/OranjeNassauColPD"><img class="socialeLogo" src="{{ asset('images/youtubeLogo.png') }}" alt="youtube"></a>
+            </div>
+            <h4>OrangeQuest:</h4>
             </p>
         </div>
     </div>

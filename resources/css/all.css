@@ -15,6 +15,21 @@ footer {
     display: flex;
     @apply bg-amber-50;
     font-size: 20px;
+    .socialeLogo {
+        width: 60px !important;
+        height: 60px !important;
+        padding: 5px;
+    }
+    .socialeLogoInsta {
+        width: 70px !important;
+        height: 60px !important;
+        left: 0;
+    }
+    .logo {
+        display: flex;
+        max-width: 55%;
+        max-height: 100px;
+    }
     .btn {
         img {
             filter: invert(100%);
@@ -60,7 +75,6 @@ footer {
             ::-webkit-scrollbar {
                 display: none;
             }
-
         }
     }
 
