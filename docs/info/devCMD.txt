@@ -31,7 +31,8 @@
         je kan ook 1 (of meerdere) vars met de url sturen:
 
             Route::get('/[PAGE]/[VAR1]/[VAR2]', function ($[VAR1], $[VAR2]) {});
-    
+
+        !! je moet {VAR} gebruiken !!
         maar dan MOET de url ook wel ALLE vars hebben in deze vorm:
             domijn/paginaNaam/waarde1/waarde2
         bijvoorbeeld:

@@ -28,6 +28,11 @@ $title = 'controlRoom';
 <li>
     <a href="user/{{ Auth::user()?->id }}">accountInfo</a>
 </li>
+
+<li>
+    <a href="user/{{ Auth::user()?->id }}/resetPassword">resetPassword</a>
+</li>
+
 <P>
 {{ Auth::user()?->name }}
  </P>
