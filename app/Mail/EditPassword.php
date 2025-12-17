@@ -29,7 +29,7 @@ class EditPassword extends Mailable
     {
         return new Envelope(
             from: new Address('noreply@orangequest.org', 'orangequest'),
-            subject: 'Order Shipped',
+            subject: 'reset password',
         );
     }
 
@@ -39,7 +39,7 @@ class EditPassword extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.resetPassword',
+            html: 'mail.resetPassword',
         );
     }
 

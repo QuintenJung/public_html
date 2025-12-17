@@ -136,10 +136,11 @@ class UsersController extends Controller
     }
 
     public function passwordVergeten($id)
-    {  
+    {
         $userInfo = user::findOrFail($id);
         // return $userInfo;
         Mail::to($userInfo)->send(new EditPassword());
-        return "shit";
+        // return "shit";
+        return redirect()->route('controlRoom');
     }
 }
