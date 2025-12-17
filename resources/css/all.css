@@ -179,6 +179,9 @@ header {
             object-fit: contain;
         }
     }
+    #hereLink {
+        @apply font-semibold text-white decoration-amber-500 underline;
+    }
 }
 
 .nieuws-bar{

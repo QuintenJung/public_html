@@ -24,7 +24,8 @@ $title = 'login';
                 <label>password:</label>
                 <input type="password" id="password" name="password" class="inputText"><br>
 
-                <button type="submit" id="submitButton">Done</button>
+                <button type="submit" id="submitButton">Done</button><br>
+                <p><a id="hereLink" href="create">Dont have an account? Register here!</a></p>
             </form>
         </div>
     </div>

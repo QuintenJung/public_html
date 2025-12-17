@@ -2,8 +2,10 @@
 
 @yield('background')
 
-<main class="formMain">
-@yield('content')
+<main>
+    <div class="formMain">
+        @yield('content')
+    </div>
 </main>
 
 

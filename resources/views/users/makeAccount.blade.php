@@ -40,6 +40,7 @@ $title = 'account aanmaken';
                     <input type="password" id="password_confirmation" name="password_confirmation">
                 </div><br>
                 <button type="submit" id="submitButton">Done</button>
+                <p><a id="hereLink" href="login">Already have an account? Login here!</a></p>
             </form>
         </div>
     </div>
