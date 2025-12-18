@@ -9,31 +9,37 @@ blue-600
 body {
     background-color: transparent !important;
 }
+
 footer {
     height: 30vh;
     box-shadow: 0 -10px 5px #0000001a;
     display: flex;
     @apply bg-amber-50;
     font-size: 20px;
+
     .socialeLogo {
         width: 60px !important;
         height: 60px !important;
         padding: 5px;
     }
+
     .socialeLogoInsta {
         width: 70px !important;
         height: 60px !important;
         left: 0;
     }
+
     .logo {
         display: flex;
         max-width: 55%;
         max-height: 100px;
     }
+
     .btn {
         img {
             filter: invert(100%);
         }
+
         position: fixed;
         bottom: 10px;
         left: 10px;
@@ -41,14 +47,17 @@ footer {
         height: 60px;
         width: 60px;
     }
+
     .modal {
         div {
             height: unset !important;
             @apply text-amber-50;
         }
-        a{
+
+        a {
             @apply font-semibold text-white decoration-amber-500 underline;
         }
+
         button {
             left: unset !important;
         }
@@ -72,6 +81,7 @@ footer {
             overflow-y: scroll;
             -ms-overflow-style: none;
             scrollbar-width: none;
+
             ::-webkit-scrollbar {
                 display: none;
             }
@@ -95,13 +105,13 @@ header {
     height: 15dvh;
     justify-content: space-between;
 
-    div{
+    div {
         /* @apply bg-amber-900; */
         display: flex;
         flex-wrap: wrap;
         margin: 0 0 0 1vw;
 
-        a img{
+        a img {
             height: 100%;
         }
 
@@ -164,66 +174,87 @@ header {
     width: 80%;
     margin: 1em auto;
     padding: 1em;
+    height: 40vh;
+    #deleteButton {
+        font-size: 2vh;
+    }
+    #submitButton {
+        font-size: 2vh;
+        @apply text-orange-500;
+    }
+    .w-80 {
+        font-size: 2vh;
+    }
+
+    .fieldset {
+        margin: auto;
+        font-size: x-large;
+    }
+
+    form {
+        height: 90%;
+
+        .title {
+            font-size: 3vh;
+            width: 100%;
+            height: fit-content;
+        }
+
+        &>div:nth-child(3) {
+            height: 90%;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 100%;
+    }
+
+    .validator-hint hidden {
+        @apply bg-gray-800
+    }
+
     &>div:nth-child(1) {
         width: 50%;
         display: flex;
         align-items: center;
         text-align: center;
         font-size: x-large;
-        input {
-            border: 2px solid rgb(31 41 55);
-            border-radius: 8px;
-            @apply bg-amber-50;
-            text-align: center;
-            width: 100%;
-            color: rgb(31 41 55);
-        }
-        button {
-            border: 2px solid black;
-            border-radius: 15px;
-            width: 35%;
-            @apply bg-gray-800;
-            color: oklch(98.7% 0.022 95.277);
-            text-align: center;
-        }
+
         button:hover {
             @apply bg-amber-50;
             color: rgb(31 41 55);
             cursor: pointer;
         }
+
         div:nth-child(1) {
-            @apply bg-cyan-900;
-            width: 60%;
+            height: 90%;
+            width: 90%;
             margin: auto;
             padding: 1%;
             border: 2px solid black;
             border-radius: 10px;
             color: oklch(76.9% 0.188 70.08);
         }
-        textarea {
-            border: 2px solid rgb(31 41 55);
-            border-radius: 8px;
-            @apply bg-amber-50;
-            text-align: center;
-            width: 100%;
-            color: rgb(31 41 55);
-        }
     }
+
     &>div:nth-child(2) {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
             object-fit: contain;
         }
     }
+
     #hereLink {
         @apply font-semibold text-white decoration-amber-500 underline;
     }
 }
 
-.nieuws-bar{
+.nieuws-bar {
     @apply bg-gray-800 text-amber-500;
     padding: 0 0 10px 20px;
     font-size: 125%
@@ -237,7 +268,7 @@ header {
 
 main {
     min-height: calc(138dvh - 9dvh - 26vh);
-    
+
 
     .news {
         width: 600px;
@@ -262,14 +293,15 @@ main {
                 text-decoration: none;
                 margin-left: 25px;
             }
-        
+
         }
     }
 
-    .content{
+    .content {
         bottom: -18vh;
         display: flex;
-        position: absolute; 
+        position: absolute;
+
         iframe {
             width: calc(100vw/3);
             padding: 0;

@@ -19,19 +19,29 @@ $title = 'editUser';
             <form action="/user/{{ $userInfo[0]['id'] }}" method="POST">
                 @csrf
                 @method('PUT')
-                <h2>Your info</h2>
-                <h4>Username: {{ $userInfo[0]['name'] }}</h4>
-                <h4>Email: {{ $userInfo[0]['email'] }}</h4>
-                <label>Change username</label>
-                <input type="text" id="name" name="name"
-                    class="inputText"placeholder="{{ $userInfo[0]['name'] }}"><br>
-                <button type="submit" id="submitButton">Change</button><br>
-                <form action="/user/{{ Auth::user()?->id }}" method="POST">
+                <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                    <h4>Username: {{ $userInfo[0]['name'] }}</h4>
+                    <h4>Email: {{ $userInfo[0]['email'] }}</h4>
+                </fieldset>
+                <label class="input validator w-80">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </g>
+                    </svg>
+                    <input type="text" placeholder="{{ $userInfo[0]['name'] }}" name="name"
+                        pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30"
+                        title="Only letters, numbers or dash" />
+                </label><br>
+                <input type="submit" value="Submit" id="submitButton" class="btn" />
+            </form>
+             <form action="/user/{{ Auth::user()?->id }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" id="deleteButton">*Delete account</button>
+                    <input type="submit" value="Delete account" id="deleteButton" class="btn bg-red-600" />
                 </form>
-            </form>
         </div>
     </div>
 @endsection
