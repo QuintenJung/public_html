@@ -8,47 +8,65 @@ blue-600
 /* don't touch the body */
 body {
     background-color: transparent !important;
+    overflow-x: hidden;
 }
+
 footer {
     height: 30vh;
     box-shadow: 0 -10px 5px #0000001a;
     display: flex;
     @apply bg-amber-50;
-    font-size: 20px;
-    .socialeLogo {
-        width: 60px !important;
-        height: 60px !important;
-        padding: 5px;
+
+    h4{
+        @apply font-bold
     }
-    .socialeLogoInsta {
-        width: 70px !important;
-        height: 60px !important;
-        left: 0;
-    }
-    .logo {
+
+    .socialLogo {
+        max-height: 40px;
+        padding: 0;
         display: flex;
-        max-width: 55%;
-        max-height: 100px;
-    }
-    .btn {
-        img {
-            filter: invert(100%);
+        background: unset;
+
+        a {
+            display: block;
+            height: 40px;
+            width: 40px;
+
+            img {
+                height: 40px;
+                filter: invert(100%);
+
+                &:hover{
+                    filter: invert(100%) opacity(50%);
+                }
+            }
         }
+    }
+
+
+    .btn {
         position: fixed;
         bottom: 10px;
-        left: 10px;
+        right: 10px;
         padding: 5px;
         height: 60px;
         width: 60px;
+
+        img {
+            filter: invert(100%);
+        }
     }
+
     .modal {
         div {
             height: unset !important;
             @apply text-amber-50;
         }
-        a{
+
+        a {
             @apply font-semibold text-white decoration-amber-500 underline;
         }
+
         button {
             left: unset !important;
         }
@@ -58,6 +76,10 @@ footer {
         height: 100%;
         width: 25%;
         padding: 14px 7px;
+
+        a {
+            @apply text-white decoration-blue-500 underline;
+        }
 
         div {
             @apply bg-amber-500;
@@ -72,6 +94,7 @@ footer {
             overflow-y: scroll;
             -ms-overflow-style: none;
             scrollbar-width: none;
+
             ::-webkit-scrollbar {
                 display: none;
             }
@@ -95,13 +118,13 @@ header {
     height: 15dvh;
     justify-content: space-between;
 
-    div{
+    div {
         /* @apply bg-amber-900; */
         display: flex;
         flex-wrap: wrap;
         margin: 0 0 0 1vw;
 
-        a img{
+        a img {
             height: 100%;
         }
 
@@ -164,12 +187,14 @@ header {
     width: 80%;
     margin: 1em auto;
     padding: 1em;
+
     &>div:nth-child(1) {
         width: 50%;
         display: flex;
         align-items: center;
         text-align: center;
         font-size: x-large;
+
         input {
             border: 2px solid rgb(31 41 55);
             border-radius: 8px;
@@ -178,6 +203,7 @@ header {
             width: 100%;
             color: rgb(31 41 55);
         }
+
         button {
             border: 2px solid black;
             border-radius: 15px;
@@ -186,11 +212,13 @@ header {
             color: oklch(98.7% 0.022 95.277);
             text-align: center;
         }
+
         button:hover {
             @apply bg-amber-50;
             color: rgb(31 41 55);
             cursor: pointer;
         }
+
         div:nth-child(1) {
             @apply bg-cyan-900;
             width: 60%;
@@ -200,6 +228,7 @@ header {
             border-radius: 10px;
             color: oklch(76.9% 0.188 70.08);
         }
+
         textarea {
             border: 2px solid rgb(31 41 55);
             border-radius: 8px;
@@ -209,21 +238,24 @@ header {
             color: rgb(31 41 55);
         }
     }
+
     &>div:nth-child(2) {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
             object-fit: contain;
         }
     }
+
     #hereLink {
         @apply font-semibold text-white decoration-amber-500 underline;
     }
 }
 
-.nieuws-bar{
+.nieuws-bar {
     @apply bg-gray-800 text-amber-500;
     padding: 0 0 10px 20px;
     font-size: 125%
@@ -237,7 +269,7 @@ header {
 
 main {
     min-height: calc(138dvh - 9dvh - 26vh);
-    
+    position: relative;
 
     .news {
         width: 600px;
@@ -262,14 +294,16 @@ main {
                 text-decoration: none;
                 margin-left: 25px;
             }
-        
+
         }
     }
 
-    .content{
-        bottom: -18vh;
+    .content {
+        position: absolute;
+        bottom: 0;
+        top: unset;
         display: flex;
-        position: absolute; 
+
         iframe {
             width: calc(100vw/3);
             padding: 0;
