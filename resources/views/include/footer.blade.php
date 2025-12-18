@@ -5,7 +5,7 @@
     <form method="dialog">
       <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
     </form>
-    <h3 class="text-lg font-bold">Hello!</h3>
+    <h3 class="text-lg font-bold">heb je een bug gevonden?</h3>
     <a href="bug/create">go to bug report</a>
 </dialog>
     <div>
