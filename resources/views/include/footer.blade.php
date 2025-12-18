@@ -25,6 +25,8 @@
         <div style="background-image: url('{{ asset('images/info.png') }}');">
             <p>
             <h4>Snel naar *info tabs*</h4>
+            <a href="/">Home page</a> <br>
+            <a <?= active("info") ?> href="/info">Wat is Orange Quest?</a>
             </p>
         </div>
     </div>
@@ -51,7 +53,7 @@
             <a href="https://www.linkedin.com/company/onc-parkdreef"><img class="socialeLogo" src="{{ asset('images/linkedinLogo.png') }}" alt="linkedin"></a>
             <a href="https://www.youtube.com/user/OranjeNassauColPD"><img class="socialeLogo" src="{{ asset('images/youtubeLogo.png') }}" alt="youtube"></a>
             </div>
-            <h4>OrangeQuest:</h4>
+            {{-- <h4>OrangeQuest:</h4> --}}
             </p>
         </div>
     </div>
