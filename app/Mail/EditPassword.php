@@ -28,7 +28,7 @@ class EditPassword extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('noreply@orangequest.org', 'orangequest'),
+            from: new Address('noreply@orangequest.org', 'Orange Quest'),
             subject: 'reset password',
         );
     }

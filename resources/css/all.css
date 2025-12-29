@@ -8,6 +8,7 @@ blue-600
 /* don't touch the body */
 body {
     background-color: transparent !important;
+    overflow-x: hidden;
 }
 
 footer {
@@ -15,37 +16,51 @@ footer {
     box-shadow: 0 -10px 5px #0000001a;
     display: flex;
     @apply bg-amber-50;
-    font-size: 20px;
 
-    .socialeLogo {
-        width: 60px !important;
-        height: 60px !important;
-        padding: 5px;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: 120dvh;
     }
 
-    .socialeLogoInsta {
-        width: 70px !important;
-        height: 60px !important;
-        left: 0;
+
+    h4 {
+        @apply font-bold
     }
 
-    .logo {
+    .socialLogo {
+        max-height: 40px;
+        padding: 0;
         display: flex;
-        max-width: 55%;
-        max-height: 100px;
+        background: unset;
+
+        a {
+            display: block;
+            height: 40px;
+            width: 40px;
+
+            img {
+                height: 40px;
+                filter: invert(100%);
+
+                &:hover {
+                    filter: invert(100%) opacity(50%);
+                }
+            }
+        }
     }
+
 
     .btn {
-        img {
-            filter: invert(100%);
-        }
-
         position: fixed;
         bottom: 10px;
-        left: 10px;
+        right: 10px;
         padding: 5px;
         height: 60px;
         width: 60px;
+
+        img {
+            filter: invert(100%);
+        }
     }
 
     .modal {
@@ -67,6 +82,15 @@ footer {
         height: 100%;
         width: 25%;
         padding: 14px 7px;
+
+        @media (max-width: 600px) {
+            width: 100dvw;
+            height: 30vh;
+        }
+
+        a {
+            @apply text-white decoration-blue-500 underline;
+        }
 
         div {
             @apply bg-amber-500;
@@ -109,7 +133,24 @@ header {
         /* @apply bg-amber-900; */
         display: flex;
         flex-wrap: wrap;
-        margin: 0 0 0 1vw;  
+        margin: 0 0 0 1vw;
+
+        #mobileLogo {
+            display: none;
+
+            @media (max-width: 600px) {
+                display: block !important;
+                width: 15dvh;
+            }
+        }
+
+        a img {
+
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+
 
         a {
             @apply text-amber-500;
@@ -117,6 +158,7 @@ header {
             line-height: 7.5dvh;
             margin: 0 1.25dvh;
             height: 100%;
+
         }
 
         p {
@@ -142,7 +184,6 @@ header {
             height: 50%;
             margin: auto 10px;
             padding: 0 15px;
-
 
             button,
             a {
@@ -170,45 +211,6 @@ header {
     width: 80%;
     margin: 1em auto;
     padding: 1em;
-    height: 40vh;
-    #deleteButton {
-        font-size: 2vh;
-    }
-    #submitButton {
-        font-size: 2vh;
-        @apply text-orange-500;
-    }
-    .w-80 {
-        font-size: 2vh;
-    }
-
-    .fieldset {
-        margin: auto;
-        font-size: x-large;
-    }
-
-    form {
-        height: 90%;
-
-        .title {
-            font-size: 3vh;
-            width: 100%;
-            height: fit-content;
-        }
-
-        &>div:nth-child(3) {
-            height: 90%;
-        }
-    }
-
-    textarea {
-        width: 100%;
-        height: 100%;
-    }
-
-    .validator-hint hidden {
-        @apply bg-gray-800
-    }
 
     &>div:nth-child(1) {
         width: 50%;
@@ -217,6 +219,24 @@ header {
         text-align: center;
         font-size: x-large;
 
+        input {
+            border: 2px solid rgb(31 41 55);
+            border-radius: 8px;
+            @apply bg-amber-50;
+            text-align: center;
+            width: 100%;
+            color: rgb(31 41 55);
+        }
+
+        button {
+            border: 2px solid black;
+            border-radius: 15px;
+            width: 35%;
+            @apply bg-gray-800;
+            color: oklch(98.7% 0.022 95.277);
+            text-align: center;
+        }
+
         button:hover {
             @apply bg-amber-50;
             color: rgb(31 41 55);
@@ -224,13 +244,22 @@ header {
         }
 
         div:nth-child(1) {
-            height: 90%;
-            width: 90%;
+            @apply bg-cyan-900;
+            width: 60%;
             margin: auto;
             padding: 1%;
             border: 2px solid black;
             border-radius: 10px;
             color: oklch(76.9% 0.188 70.08);
+        }
+
+        textarea {
+            border: 2px solid rgb(31 41 55);
+            border-radius: 8px;
+            @apply bg-amber-50;
+            text-align: center;
+            width: 100%;
+            color: rgb(31 41 55);
         }
     }
 
@@ -259,14 +288,28 @@ header {
 .background-video {
     @apply fixed w-full min-h-full h-auto max-w-full -z-10;
     top: 0;
-    @apply bg-gray-800;
+    @apply bg-amber-50;
+
+    @media (max-width: 600px) {
+        min-height: unset;
+        top: 15dvh;
+    }
 }
 
 main {
     min-height: calc(138dvh - 9dvh - 26vh);
+    position: relative;
+
+    @media (max-width: 600px) {
+        min-height: calc(120dvh - 15dvh - 30vh);
+    }
 
 
     .news {
+        @media (max-width: 600px) {
+            display: none;
+        }
+
         width: 600px;
         position: absolute;
         right: 0;
@@ -294,15 +337,28 @@ main {
     }
 
     .content {
-        bottom: -18vh;
-        display: flex;
         position: absolute;
+        bottom: 0;
+        top: unset;
+        display: flex;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            overflow-y: scroll;
+            height: 40dvh;
+            border: 0 solid white;
+            border-width: 5px 0;
+        }
 
         iframe {
             width: calc(100vw/3);
             padding: 0;
             margin: 0;
             aspect-ratio: 16/9;
+
+            @media (max-width: 600px) {
+                width: 100dvw;
+            }
         }
     }
 
@@ -314,6 +370,15 @@ main {
         margin: 10dvh auto;
         padding: 1.5em;
         border-radius: 2em;
+
+        @media (max-width: 600px) {
+            width: 90vw;
+            margin: 4dvh auto;
+        }
+
+        a {
+            @apply decoration-amber-500 underline;
+        }
 
         .title {
             @apply text-amber-500;
@@ -367,6 +432,10 @@ main {
     left: 0;
     right: 0;
     z-index: -1;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
 
 .profileCardShell {
