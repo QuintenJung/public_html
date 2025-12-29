@@ -109,11 +109,7 @@ header {
         /* @apply bg-amber-900; */
         display: flex;
         flex-wrap: wrap;
-        margin: 0 0 0 1vw;
-
-        a img {
-            height: 100%;
-        }
+        margin: 0 0 0 1vw;  
 
         a {
             @apply text-amber-500;
