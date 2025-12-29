@@ -18,19 +18,17 @@ $title = 'editUser';
             <form action="/bug" method="POST">
                 @csrf
                 <div>
-                    <input type="text" placeholder="Title" name="title" class="input title" />
+                    <label>Ticket</label>
+                    <input type="text" id="title" name="title" class="inputText" placeholder="Title"><br>
                 </div>
                 <div>
-                    <textarea class="textarea" name="content"></textarea>
+                    <textarea name="content" id="content" rows="5" cols="60"></textarea><br>
                 </div>
                 <div>
                     <input type="hidden" name="userInfo" value="{{ $userInfo }}">
                 </div>
-                <input type="submit" value="Report" id="submitButton" class="btn" />
+                <button type="submit" id="submitButton">Report</button>
             </form>
         </div>
-    </div>
-    <div>
-        <img src="{{ asset('images/bugReportButton.png') }}" alt="bug">
     </div>
 @endsection
