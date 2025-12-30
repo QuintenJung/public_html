@@ -30,7 +30,7 @@ class ResetTokensController extends Controller
             'token' => $token,
             'userId' => $userId
         ]);
-        // return redirect()->route("");
+        return "<a href='/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword'>/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword</a>";
     }
 
     /**
@@ -44,9 +44,10 @@ class ResetTokensController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(resetTokens $resetTokens)
+    public function show($id)
     {
-        //
+        $tokenData = resetTokens::find($id);
+        return view('resetTokens.inputToken', ['data'=> $tokenData]);
     }
 
     /**

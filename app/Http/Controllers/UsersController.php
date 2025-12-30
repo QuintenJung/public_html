@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
+use App\Models\resetTokens;
 
 use App\Mail\OrderShipped;
 use Illuminate\Http\RedirectResponse;
@@ -142,5 +143,16 @@ class UsersController extends Controller
         Mail::to($userInfo)->send(new EditPassword());
         // return "shit";
         return redirect()->route('controlRoom');
+    }
+    public function passwordReset($id , $token)
+    {
+        $tokenFromId = resetTokens::find($id)["token"];
+        if ($tokenFromId == $token){
+            return "correct";
+        }
+        else
+        {
+            return "wrong";
+        }
     }
 }

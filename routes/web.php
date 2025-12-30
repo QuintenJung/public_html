@@ -34,6 +34,7 @@ Route::post('/user/login', [UsersController::class, 'login']);
 Route::get('/logout', [UsersController::class, 'logout'])->name("logout");
 Route::get('/user/{id}/resetPassword', [UsersController::class, 'passwordVergeten']);
 Route::resource('/user', UsersController::class);
+Route::get('/user/{id}/{token}/resetPassword', [UsersController::class, 'passwordReset']);
 
 Route::resource('/bug', BugsController::class);
 
