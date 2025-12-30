@@ -148,7 +148,7 @@ class UsersController extends Controller
     {
         $tokenFromId = resetTokens::find($id)["token"];
         if ($tokenFromId == $token){
-            return "correct";
+            return view('');
         }
         else
         {
