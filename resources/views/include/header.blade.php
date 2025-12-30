@@ -21,6 +21,9 @@ function active($str)
     <header>
         <div>
             <a href="/">
+                <img src="{{ asset('images/favicon-32x32.png') }}" id="mobileLogo">
+            </a>
+            <a href="/">
                 <img src="{{ asset('images/orangequest-header.png') }}" id="logo">
             </a>
         </div>

@@ -1,5 +1,5 @@
 <footer>
-    <button class="btn btn-circle" onclick="my_modal_3.showModal()"><img src="{{ asset('images/bugReportButton.png') }}"
+    {{-- <button class="btn btn-circle" onclick="my_modal_3.showModal()"><img src="{{ asset('images/bugReportButton.png') }}"
             alt="bug"></button>
     <dialog id="my_modal_3" class="modal">
         <div class="modal-box">
@@ -8,7 +8,7 @@
             </form>
             <h3 class="text-lg font-bold">heb je een bug gevonden?</h3>
             <a href="bug/create">go to bug report</a>
-    </dialog>
+    </dialog> --}}
     <div>
         <div style="background-image: url('{{ asset('images/home.png') }}');">
             <p>
@@ -26,7 +26,7 @@
         <div style="background-image: url('{{ asset('images/info.png') }}');">
             <p>
             <h4>Snel naar</h4>
-            <a href="home">start pagina</a><br>
+            <a href="/">start pagina</a><br>
             <a href="info">Wat is Orange Quest?</a><br>
             </p>
         </div>
@@ -66,11 +66,11 @@
         </div>
     </div>
 </footer>
-<script>
+{{-- <script>
     function lavaLampLama() {
         window.location.href = "/controlRoom"
     }
-</script>
+</script> --}}
 </body>
 
 </html>
