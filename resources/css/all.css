@@ -130,8 +130,6 @@ header {
     justify-content: space-between;
 
     div {
-
-
         /* @apply bg-amber-900; */
         display: flex;
         flex-wrap: wrap;
@@ -147,12 +145,12 @@ header {
         }
 
         a img {
-            height: 100%;
 
             @media (max-width: 600px) {
                 display: none;
             }
         }
+
 
         a {
             @apply text-amber-500;
@@ -160,6 +158,7 @@ header {
             line-height: 7.5dvh;
             margin: 0 1.25dvh;
             height: 100%;
+
         }
 
         p {
@@ -185,7 +184,6 @@ header {
             height: 50%;
             margin: auto 10px;
             padding: 0 15px;
-
 
             button,
             a {
@@ -246,13 +244,25 @@ header {
         }
 
         div:nth-child(1) {
-            @apply bg-cyan-900;
+            @apply bg-blue-950;
             width: 60%;
             margin: auto;
-            padding: 1%;
+            padding: 3%;
             border: 2px solid black;
             border-radius: 10px;
             color: oklch(76.9% 0.188 70.08);
+        }
+
+        #submitButton{
+            margin-top: 5%;
+            @apply bg-lime-600;
+            width: 60%;
+            font-size: large;
+        }
+        #deleteButton{
+            @apply bg-red-600;
+            width: 60%;
+            font-size: large;
         }
 
         textarea {
@@ -262,6 +272,9 @@ header {
             text-align: center;
             width: 100%;
             color: rgb(31 41 55);
+        }
+        fieldset {
+            margin: auto;
         }
     }
 

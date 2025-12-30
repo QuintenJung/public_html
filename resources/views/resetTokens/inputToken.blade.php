@@ -18,9 +18,7 @@ $title = 'editUser';
         <div>
             <form action="/token/{{ $data['id'] }}" method="GET">
                 @csrf
-                <input type="number" class="input validator" name ="token" required placeholder="6-digit number"
-                    min="1" max="999999"/>
-                <p class="validator-hint">something</p>
+                <input type="number" class="input validator" name ="token" required placeholder="6-digit number"/>
                 <button type="submit" id="submitButton">submit</button><br>
             </form>
         </div>

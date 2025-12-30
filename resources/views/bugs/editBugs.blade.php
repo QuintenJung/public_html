@@ -21,9 +21,9 @@ $title = 'editTicket';
                 @csrf
                 @method('PUT')
                 <label>Change Ticket</label>
-                <input type="text" id="title" name="title" class="inputText" placeholder="{{ $data['title'] }}"><br>
-                <textarea name="content" id="content" rows="5" cols="60" placeholder="{{ $data['content'] }}"></textarea><br>
-                <button type="submit" id="submitButton">Change</button>
+                <input type="text" placeholder="{{ $data['title'] }}" name="title" class="input" />
+                <textarea name="content" class="textarea textarea-md" rows="5"></textarea>
+                <input type="submit" id="submitButton" value="Report" name="submit" class="btn" />
             </form>
         </div>
     </div>

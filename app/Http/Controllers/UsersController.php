@@ -146,13 +146,32 @@ class UsersController extends Controller
     }
     public function passwordReset($id , $token)
     {
-        $tokenFromId = resetTokens::find($id)["token"];
-        if ($tokenFromId == $token){
-            return "correct";
+        $tokenFromId = resetTokens::find($id);
+        if ($tokenFromId["token"] == $token){
+            return view('resetTokens.resetPassword', ["userId" =>$tokenFromId["userId"]]);
         }
         else
         {
-            return "wrong";
+            return redirect('/hoi');
         }
+    }
+    public function updatePasswordReset($userId , Request $request)
+    {
+        $validated = $request->validate([
+            'password' => 'ascii|required|confirmed'
+        ]);
+        $userInfo = user::find($userId);
+        $user = $userInfo->update([
+            'password' => Hash::make($validated['password']),
+        ]);
+        $request->session()->regenerate();
+        $allTokensForId = resetTokens::where('userId', $userId)->get();
+        // return view('test', ["content" =>$allTokensForId]);
+        foreach($allTokensForId as $token) {
+            $token->delete();
+        }
+        // $token = resetTokens::find($user)[0];
+        // $token->delete();
+        return redirect()->route("user.index");
     }
 }
