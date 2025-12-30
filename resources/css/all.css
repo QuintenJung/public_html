@@ -261,6 +261,9 @@ header {
             width: 100%;
             color: rgb(31 41 55);
         }
+        fieldset {
+            margin: auto;
+        }
     }
 
     &>div:nth-child(2) {
