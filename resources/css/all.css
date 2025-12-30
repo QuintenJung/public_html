@@ -244,13 +244,20 @@ header {
         }
 
         div:nth-child(1) {
-            @apply bg-cyan-900;
+            @apply bg-blue-950;
             width: 60%;
             margin: auto;
-            padding: 1%;
+            padding: 3%;
             border: 2px solid black;
             border-radius: 10px;
             color: oklch(76.9% 0.188 70.08);
+        }
+
+        .btn{
+            margin-top: 5%;
+            @apply bg-lime-600;
+            width: 60%;
+            font-size: large;
         }
 
         textarea {

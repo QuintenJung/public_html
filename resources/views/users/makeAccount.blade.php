@@ -93,7 +93,7 @@ $title = 'account aanmaken';
                         Must be more than 8 characters, including
                         <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
                     </p>
-                </div><br>
+                </div>
                 <input type="submit" value="Done" name="submit" class="btn" />
                 <p><a id="hereLink" href="login">Already have an account? Login here!</a></p>
             </form>
