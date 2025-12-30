@@ -102,6 +102,10 @@ $title = 'info';
         Leerlingen: doe mee en laat zien hoe jij met ICT en AI de wereld duurzamer maakt.<br>
         Scholen: schrijf teams in en integreer Orange Quest in jullie lessen.<br>
         Bedrijven & universiteiten: word partner, mentor of jurylid en inspireer de innovators van
-        morgen.<br>
+        morgen.<br><br>
+         <span class="sub-title">
+            10. Contact informatie
+        </span><br>
+        U kunt ons bereiken met  <a href="mailto:info@orangequest.org">info@orangequest.org</a>
     </p>
 @endsection
