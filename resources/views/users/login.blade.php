@@ -26,13 +26,8 @@ $title = 'login';
                             <circle cx="12" cy="7" r="4"></circle>
                         </g>
                     </svg>
-                    <input type="text" name="login" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*"
-                        minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+                    <input type="text" name="login" required placeholder="Username" />
                 </label>
-                <p class="validator-hint hidden">
-                    Must be 3 to 30 characters
-                    containing only letters, numbers or dash
-                </p>
                 <label class="input validator">
                     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
@@ -43,15 +38,9 @@ $title = 'login';
                             <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                         </g>
                     </svg>
-                    <input type="password" name="password" required placeholder="Password" minlength="8"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+                    <input type="password" name="password" required placeholder="Password"/>
                 </label>
-                <p class="validator-hint hidden">
-                    Must be more than 8 characters, including
-                    <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
-                </p>
-                <input type="submit" value="Done" name="submit" class="btn" />
+                <input type="submit" value="Done" id="submitButton" name="submit" class="btn" />
                 <p><a id="hereLink" href="create">Dont have an account? Register here!</a></p>
             </form>
         </div>

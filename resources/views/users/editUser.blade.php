@@ -31,16 +31,14 @@ $title = 'editUser';
                             <circle cx="12" cy="7" r="4"></circle>
                         </g>
                     </svg>
-                    <input type="text" placeholder="{{ $userInfo[0]['name'] }}" name="name"
-                        pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30"
-                        title="Only letters, numbers or dash" />
+                    <input type="text" placeholder="{{ $userInfo[0]['name'] }}" name="name" />
                 </label><br>
                 <input type="submit" value="Submit" id="submitButton" class="btn" />
             </form>
             <form action="/user/{{ Auth::user()?->id }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <input type="submit" value="Delete account" id="deleteButton" class="btn bg-red-600" />
+                <input type="submit" value="Delete account" id="deleteButton" class="btn" />
             </form>
             </form>
         </div>

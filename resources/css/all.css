@@ -253,9 +253,14 @@ header {
             color: oklch(76.9% 0.188 70.08);
         }
 
-        .btn{
+        #submitButton{
             margin-top: 5%;
             @apply bg-lime-600;
+            width: 60%;
+            font-size: large;
+        }
+        #deleteButton{
+            @apply bg-red-600;
             width: 60%;
             font-size: large;
         }

@@ -30,14 +30,8 @@ $title = 'resetPassword';
                                 <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                             </g>
                         </svg>
-                        <input type="password" name="password" required placeholder="Password" minlength="8"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+                        <input type="password" name="password" required placeholder="Password"/>
                     </label>
-                    <p class="validator-hint hidden">
-                        Must be more than 8 characters, including
-                        <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
-                    </p>
                 </div>
                 <div>
                     <label class="input validator">
@@ -50,15 +44,9 @@ $title = 'resetPassword';
                                 <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                             </g>
                         </svg>
-                        <input type="password" name="password_confirmation" required placeholder="herhaal password"
-                            minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+                        <input type="password" name="password_confirmation" required placeholder="herhaal password"/>
                     </label>
-                    <p class="validator-hint hidden">
-                        Must be more than 8 characters, including
-                        <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
-                    </p>
-                </div><br>
+                </div>
                 <input type="submit" value="Submit" name="submit" id="submitButton" class="btn" />
             </form>
         </div>
