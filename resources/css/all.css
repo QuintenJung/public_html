@@ -19,7 +19,7 @@ footer {
 
     @media (max-width: 600px) {
         flex-direction: column;
-        height: 120dvh;
+        height: 90dvh;
     }
 
 
@@ -80,7 +80,7 @@ footer {
 
     div {
         height: 100%;
-        width: 25%;
+        width: 34%;
         padding: 14px 7px;
 
         @media (max-width: 600px) {
@@ -117,10 +117,10 @@ footer {
         background-size: 60%;
     }
 
-    div:nth-child(4) div {
+    /*div:nth-child(4) div {
         background-position: 120%;
         background-size: 45%;
-    }
+    }*/
 }
 
 header {
@@ -199,6 +199,20 @@ header {
                 @apply decoration-blue-500;
             }
         }
+    }
+
+    .btn {
+        width: 5vw;
+        height: 5vh;
+        margin: auto;
+    }
+
+    .dropdown {
+        margin-right: 3vw;
+    }
+
+    .dropdown-content {
+        margin-right: 0;
     }
 }
 
@@ -307,7 +321,7 @@ header {
 
     @media (max-width: 600px) {
         min-height: unset;
-        top: 15dvh;
+        position: relative;
     }
 }
 
@@ -316,19 +330,19 @@ main {
     position: relative;
 
     @media (max-width: 600px) {
-        min-height: calc(120dvh - 15dvh - 30vh);
+        min-height: calc(85dvh - 15dvh - 30vh);
     }
 
 
     .news {
-        @media (max-width: 600px) {
-            display: none;
-        }
-
         width: 600px;
         position: absolute;
         right: 0;
         top: 100;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
 
         a {
             @apply bg-amber-500 hover:bg-amber-600;
@@ -361,8 +375,6 @@ main {
             flex-direction: column;
             overflow-y: scroll;
             height: 40dvh;
-            border: 0 solid white;
-            border-width: 5px 0;
         }
 
         iframe {

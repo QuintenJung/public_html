@@ -31,7 +31,7 @@
             </p>
         </div>
     </div>
-    <div>
+    <!--<div>
         <div style="background-image: url('{{ asset('images/dev.png') }}');">
             <p>
             <h4>credits</h4>
@@ -41,7 +41,7 @@
             Jasper Bruijn<br>
             </p>
         </div>
-    </div>
+    </div>-->
     <div>
         <div style="background-image: url('{{ asset('images/phone.png') }}');">
             <p>
@@ -61,7 +61,6 @@
                     <img src="{{ asset('images/youtubeLogo.png') }}" alt="youtube">
                 </a>
             </div>
-            <p>OrangeQuest:</p>
             </p>
         </div>
     </div>
