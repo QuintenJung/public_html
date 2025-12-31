@@ -206,13 +206,12 @@ header {
         height: 5vh;
         margin: auto;
     }
-
-    .dropdown {
-        margin-right: 3vw;
+    .m-1 {
+        margin-right: 2dvw;
     }
 
     .dropdown-content {
-        margin-right: 0;
+        right: 0;
     }
 }
 
