@@ -206,12 +206,14 @@ header {
         height: 5vh;
         margin: auto;
     }
+
     .m-1 {
         margin-right: 2dvw;
     }
 
     .dropdown-content {
         right: 0;
+        top: 15dvh;
     }
 }
 
@@ -264,15 +266,20 @@ header {
             border: 2px solid black;
             border-radius: 10px;
             color: oklch(76.9% 0.188 70.08);
+
+            @media (max-width: 600px) {
+                width: 100%;
+            }
         }
 
-        #submitButton{
+        #submitButton {
             margin-top: 5%;
             @apply bg-lime-600;
             width: 60%;
             font-size: large;
         }
-        #deleteButton{
+
+        #deleteButton {
             @apply bg-red-600;
             width: 60%;
             font-size: large;
@@ -286,8 +293,13 @@ header {
             width: 100%;
             color: rgb(31 41 55);
         }
+
         fieldset {
             margin: auto;
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
         }
     }
 
@@ -299,6 +311,10 @@ header {
 
         img {
             object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            display: none;
         }
     }
 
@@ -457,10 +473,12 @@ main {
     top: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -100;
 
     @media (max-width: 600px) {
-        display: none;
+        top: 15dvh;
+        min-height: calc(138dvh - 9dvh - 26vh - 50vh);
+        position: absolute;
     }
 }
 
