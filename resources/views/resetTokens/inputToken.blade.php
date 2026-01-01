@@ -1,6 +1,6 @@
 <?php
 global $title;
-$title = 'editUser';
+$title = 'inputToken';
 ?>
 @extends('layouts.form')
 

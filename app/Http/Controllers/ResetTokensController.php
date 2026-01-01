@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\resetTokens;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\Mime\Email;
 
 class ResetTokensController extends Controller
 {
@@ -22,15 +24,9 @@ class ResetTokensController extends Controller
      */
     public function create()
     {
-       $token = random_int(0, 9999) * random_int(0, 9999);
-       $userId = Auth::user()->id;
-        $name = Auth::user()->name;
-        $token = resetTokens::create([
-            'name' => $name,
-            'token' => $token,
-            'userId' => $userId
-        ]);
-        return "<a href='/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword'>/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword</a>";
+      
+        return view('resetTokens.emailInput');
+        
     }
 
     /**
@@ -38,7 +34,19 @@ class ResetTokensController extends Controller
      */
     public function store(Request $request)
     {
-        // not used
+        $token = random_int(0, 9999) * random_int(0, 9999);
+        $email = $request->input('email');
+        echo $email;
+       $tokenData = User::find($email);
+       echo $tokenData;
+        // $userId = Auth::user()->id;
+        // $name = Auth::user()->name;
+        // $token = resetTokens::create([
+        //     'name' => $name,
+        //     'token' => $token,
+        //     'userId' => $userId
+        // ]);
+        // return "<a href='/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword'>/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword</a>";
     }
 
     /**
