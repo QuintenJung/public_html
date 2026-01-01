@@ -33,12 +33,12 @@ $title = 'editUser';
                     </svg>
                     <input type="text" placeholder="{{ $userInfo[0]['name'] }}" name="name" />
                 </label><br>
-                <input type="submit" value="Submit" id="submitButton" class="btn" />
+                <input type="submit" value="Klaar" id="submitButton" class="btn" />
             </form>
             <form action="/user/{{ Auth::user()?->id }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <input type="submit" value="Delete account" id="deleteButton" class="btn" />
+                <input type="submit" value="Verwijder account" id="deleteButton" class="btn" />
             </form>
             </form>
         </div>

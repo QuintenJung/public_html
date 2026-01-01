@@ -28,7 +28,7 @@ $title = 'emailInput';
                     </svg>
                     <input type="email" name="email" placeholder="mail@site.com" required />
                 </label>
-                <button type="submit" id="submitButton">submit</button><br>
+                <button type="submit" id="submitButton">Klaar</button><br>
             </form>
         </div>
     </div>

@@ -32,7 +32,7 @@ $title = 'account aanmaken';
                                 <circle cx="12" cy="7" r="4"></circle>
                             </g>
                         </svg>
-                        <input type="text" name="name" required placeholder="Username" />
+                        <input type="text" name="name" required placeholder="Gebruikersnaam" />
                     </label>
                     <div>
                         <label class="input validator">
@@ -57,7 +57,7 @@ $title = 'account aanmaken';
                                     <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                                 </g>
                             </svg>
-                            <input type="password" name="password" required placeholder="Password" />
+                            <input type="password" name="password" required placeholder="Wachtwoord" />
                         </label>
                     </div>
                     <div>
@@ -71,7 +71,7 @@ $title = 'account aanmaken';
                                     <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                                 </g>
                             </svg>
-                            <input type="password" name="password_confirmation" required placeholder="herhaal password" />
+                            <input type="password" name="password_confirmation" required placeholder="Herhaal wachtwoord" />
                             @if ($errors->any())
                                 <br>
                                 @foreach ($errors->all() as $error)
@@ -80,8 +80,8 @@ $title = 'account aanmaken';
                             @endif
                     </div>
                 </div>
-                <input type="submit" value="Done" id="submitButton" name="submit" class="btn" />
-                <p><a id="hereLink" href="login">Already have an account? Login here!</a></p>
+                <input type="submit" value="Klaar" id="submitButton" name="submit" class="btn" />
+                <p><a id="hereLink" href="login">Heb je al een account? Log dan hier in!</a></p>
             </form>
         </div>
     </div>

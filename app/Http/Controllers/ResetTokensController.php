@@ -36,17 +36,15 @@ class ResetTokensController extends Controller
     {
         $token = random_int(0, 9999) * random_int(0, 9999);
         $email = $request->input('email');
-        echo $email;
-       $tokenData = User::find($email);
-       echo $tokenData;
-        // $userId = Auth::user()->id;
-        // $name = Auth::user()->name;
-        // $token = resetTokens::create([
-        //     'name' => $name,
-        //     'token' => $token,
-        //     'userId' => $userId
-        // ]);
-        // return "<a href='/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword'>/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword</a>";
+        $allTokensForId = user::where('email', $email)->get();
+        $userId = $allTokensForId[0]['id'];
+        $name = $allTokensForId[0]['name'];
+        $token = resetTokens::create([
+            'name' => $name,
+            'token' => $token,
+            'userId' => $userId
+        ]);
+        return "<a href='/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword'>/user/" . $token['id'] . "/" . $token['token'] . "/resetPassword</a>";
     }
 
     /**

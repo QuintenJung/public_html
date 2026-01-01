@@ -18,7 +18,7 @@ $title = 'editUser';
             <form action="/bug" method="POST">
                 @csrf
                 <div>
-                    <input type="text" placeholder="Title" name="title" class="input" />
+                    <input type="text" placeholder="Titel" name="title" class="input" />
                 </div>
                 <div>
                     <textarea name="content" class="textarea textarea-md" rows="5"></textarea>

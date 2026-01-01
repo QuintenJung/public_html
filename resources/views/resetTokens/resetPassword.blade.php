@@ -30,7 +30,7 @@ $title = 'resetPassword';
                                 <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                             </g>
                         </svg>
-                        <input type="password" name="password" required placeholder="Password"/>
+                        <input type="password" name="password" required placeholder="Wachtwoord"/>
                     </label>
                 </div>
                 <div>
@@ -44,10 +44,10 @@ $title = 'resetPassword';
                                 <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                             </g>
                         </svg>
-                        <input type="password" name="password_confirmation" required placeholder="herhaal password"/>
+                        <input type="password" name="password_confirmation" required placeholder="herhaal Wachtwoord"/>
                     </label>
                 </div>
-                <input type="submit" value="Submit" name="submit" id="submitButton" class="btn" />
+                <input type="submit" value="Klaar" name="submit" id="submitButton" class="btn" />
             </form>
         </div>
     </div>

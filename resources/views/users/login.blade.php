@@ -26,7 +26,7 @@ $title = 'login';
                             <circle cx="12" cy="7" r="4"></circle>
                         </g>
                     </svg>
-                    <input type="text" name="login" required placeholder="Username" />
+                    <input type="text" name="login" required placeholder="Gebruikersnaam" />
                 </label>
                 <label class="input validator">
                     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -38,10 +38,10 @@ $title = 'login';
                             <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
                         </g>
                     </svg>
-                    <input type="password" name="password" required placeholder="Password"/>
+                    <input type="password" name="password" required placeholder="Wachtwoord"/>
                 </label>
-                <input type="submit" value="Done" id="submitButton" name="submit" class="btn" />
-                <p><a id="hereLink" href="create">Dont have an account? Register here!</a></p>
+                <input type="submit" value="Klaar" id="submitButton" name="submit" class="btn" />
+                <p><a id="hereLink" href="create">Heb je al een account? registreer dan hier!</a></p>
             </form>
         </div>
     </div>

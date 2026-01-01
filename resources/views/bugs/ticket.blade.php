@@ -30,7 +30,7 @@ $title = 'tickets';
             @else
                 <h3>user not loggedin</h3>
             @endif
-            <a href="/bug/{{$data['id']}}/edit">edit</a>
+            <a href="/bug/{{$data['id']}}/edit">Verander</a>
             <form action="/bug/{{$data['id']}}" method="POST" class="nav-item">
                 @csrf
                 @method('DELETE')
