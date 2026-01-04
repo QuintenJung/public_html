@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BugsController;
 use App\Http\Controllers\ResetTokensController;
+use App\Http\Controllers\RolController;
 use App\http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Pest\Support\View;
@@ -40,3 +41,5 @@ Route::put('/user/{userId}/updatePasswordReset', [UsersController::class, 'updat
 Route::resource('/bug', BugsController::class);
 
 Route::resource('/token', ResetTokensController::class);
+
+Route::resource('/rol', RolController::class);
