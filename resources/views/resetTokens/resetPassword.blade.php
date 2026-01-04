@@ -51,9 +51,4 @@ $title = 'resetPassword';
             </form>
         </div>
     </div>
-    @if ($errors->any())
-        @foreach ($errors->all() as $error)
-            {{ $error }}<br>
-        @endforeach
-    @endif
 @endsection
