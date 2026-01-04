@@ -4,7 +4,7 @@
 
 <main>
     <div class="formMain">
-        <div>
+        <div id="errors">
         @if ($errors->any())
             @foreach ($errors->all() as $error)
                 {{ $error }}<br>
@@ -15,5 +15,11 @@
     </div>
 </main>
 
+<script>
+    let errors = document.getElementById("errors")
+    document.getElementsByTagName('form')[0].appendChild(errors)
+    // x = document.getElementsByTagName('form')[0].childElementCount
+    errors.style.order = 2
+</script>
 
 @include('include.footer')

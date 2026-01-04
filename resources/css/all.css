@@ -227,16 +227,17 @@ header {
     margin: 1em auto;
     padding: 1em;
 
-    &>div:nth-child(1){
-        
-    }
-
-    &>div:nth-child(2) {
+    &>div:nth-child(1) {
         width: 50%;
         display: flex;
         align-items: center;
         text-align: center;
         font-size: x-large;
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
 
         input {
             border: 2px solid rgb(31 41 55);
@@ -277,10 +278,12 @@ header {
         }
 
         #submitButton {
+            margin: auto;
             margin-top: 5%;
             @apply bg-lime-600;
             width: 60%;
             font-size: large;
+            order: 3;
         }
 
         #deleteButton {
@@ -307,7 +310,7 @@ header {
         }
     }
 
-    &>div:nth-child(3) {
+    &>div:nth-child(2) {
         width: 50%;
         display: flex;
         align-items: center;

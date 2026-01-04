@@ -35,7 +35,7 @@ class RolController extends Controller
         ]);
         $rol = rol::create([
             'rol' => $validated['rol'],
-            'email' => $validated['email']
+            'email' => strtolower($validated['email'])
         ]);
         return redirect()->route("rol.index");
     }

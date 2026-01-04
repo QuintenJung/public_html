@@ -35,7 +35,7 @@ class ResetTokensController extends Controller
     public function store(Request $request)
     {
         $token = random_int(0, 9999) * random_int(0, 9999);
-        $email = $request->input('email');
+        $email = strtolower($request->input('email'));
         $allTokensForId = user::where('email', $email)->get();
         $userId = $allTokensForId[0]['id'];
         $name = $allTokensForId[0]['name'];

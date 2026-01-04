@@ -39,13 +39,13 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'ascii|required',
+            'name' => 'ascii|required|lowercase',
             'email' => 'required|email|unique:users,email',
             'password' => 'ascii|required|confirmed'
         ]);
         $user = User::create([
             'name' => $validated['name'],
-            'email' => $validated['email'],
+            'email' => strtolower($validated['email']),
             'password' => Hash::make($validated['password'])
         ]);
         Auth::login($user);
@@ -78,7 +78,7 @@ class UsersController extends Controller
     public function update(Request $request, user $user)
     {
         $validated = $request->validate([
-            'name' => 'ascii|required'
+            'name' => 'ascii|required|lowercase'
         ]);
         $userInfo = user::find($user)[0];
         $user = $userInfo->update([
@@ -116,7 +116,7 @@ class UsersController extends Controller
 
     public function login(Request $request)
     {
-        $login = $request->input('login');
+        $login = strtolower($request->input('login'));
         $password = $request->input('password');
 
         $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
