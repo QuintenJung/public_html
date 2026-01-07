@@ -344,6 +344,7 @@ header {
     font-size: 125%
 }
 
+
 .background-video {
     @apply fixed w-full min-h-full h-auto max-w-full -z-10;
     top: 0;

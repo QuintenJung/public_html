@@ -70,9 +70,24 @@
         window.location.href = "/controlRoom"
     }
 </script> --}}
+<h1 id="imageStorage" style="display:none">{{ asset('images/ducky.jpg') }}</h1>
 <script>
     function duckySeason() {
-        window.location.href = "/controlRoom"
+        let img = document.getElementById("imageStorage").innerHTML
+        const item = document.createElement("img")
+        item.src = img
+        item.alt = "🐥"
+        item.className = "background-video"
+        document.getElementsByClassName("background-video")[0].replaceWith(item)
+        let elem = ["p", "h1", "a", "h4", "h3", "input", "form"] //lijst met alle elementen
+        elem.forEach(el => {
+            document.querySelectorAll(el).forEach(object => {
+                object.classList.add("emoji-text")
+            })
+        })
+        document.querySelectorAll('.emoji-text').forEach(el => {
+            el.textContent = el.textContent?.replace(/\S/g, '🐥');
+        });
     }
 </script>
 </body>
