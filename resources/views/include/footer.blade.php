@@ -75,6 +75,7 @@
         window.location.href = "/controlRoom"
     }
 </script>
+@vite('resources/js/app.js')
 </body>
 
 </html>
