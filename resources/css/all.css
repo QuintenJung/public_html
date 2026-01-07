@@ -1,3 +1,6 @@
+:root{
+  --headerBlue: oklch(20.8% 0.042 265.755);
+}
 /* 
 colors:
 amber-50
@@ -126,7 +129,7 @@ footer {
 header {
     @apply bg-slate-900;
     display: flex;
-    height: 15dvh;
+    height: 12dvh;
     justify-content: space-between;
 
     div {
@@ -144,8 +147,13 @@ header {
             }
         }
 
-        a img {
+        #logoWrapper {
+            height: 100%;
+        }
 
+        a img {
+            max-width: 100%;
+            max-height: 100%;
             @media (max-width: 600px) {
                 display: none;
             }
@@ -234,7 +242,7 @@ header {
         text-align: center;
         font-size: x-large;
 
-        form{
+        form {
             display: flex;
             flex-direction: column;
         }
@@ -352,7 +360,7 @@ main {
     position: relative;
 
     @media (max-width: 600px) {
-        min-height: calc(85dvh - 15dvh - 30vh);
+        min-height: calc(86dvh - 30vh);
     }
 
 
@@ -363,7 +371,7 @@ main {
         top: 100;
 
         @media (max-width: 600px) {
-            display: none;
+            width: 100dvw;
         }
 
         a {
@@ -374,6 +382,10 @@ main {
 
             img {
                 height: 75px;
+
+                @media (max-width: 600px) {
+                    height: 7dvh;
+                }
             }
 
             p {
@@ -382,6 +394,13 @@ main {
                 align-items: center;
                 text-decoration: none;
                 margin-left: 25px;
+            }
+
+            @media (max-width: 600px) {
+                height: 8dvh;
+                margin: 0 !important;
+                border-top: 3px solid var(--color-slate-800);
+                border-bottom: 3px solid var(--color-slate-800);
             }
 
         }

@@ -70,6 +70,11 @@
         window.location.href = "/controlRoom"
     }
 </script> --}}
+<script>
+    function duckySeason() {
+        window.location.href = "/controlRoom"
+    }
+</script>
 </body>
 
 </html>
