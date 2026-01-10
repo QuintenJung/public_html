@@ -35,9 +35,10 @@ function active($str)
                 <div class="notDropdown">
                     <button id="notDropdownButton" class="notDropbtn">Menu</button>
                     <div id="notDropdownContent" class="notDropdown-content">
-                        <a href="#">commissies</a>
+                        <a href="/info">Wat is orangequest?</a>
+                        {{-- <a href="#">commissies</a>
                         <a href="#">login</a>
-                        <a href="#">Your account</a>
+                        <a href="#">Your account</a> --}}
                     </div>
                 </div>
                 {{-- <li>
