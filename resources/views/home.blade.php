@@ -15,11 +15,11 @@ $title = 'Home';
 @section('content')
     <div class="news">
         <a href="https://parkdreef.onc.nl/lustrum-50-jaar/">
-            <p>50 Jaar ONC Parkdreef!</p>
+            <p>Organiserende school</p>
         </a>
         <a>
             <img src="{{ asset('images/jongens-in-de-klas-768x542.jpg') }}">
-            <p>Inschrijving Orange Quest: 15 Januari 2026.</p>
+            <p>Inschrijving najaar 2026.</p>
         </a>
     </div>
     <div class="content">
